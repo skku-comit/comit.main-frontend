@@ -27,7 +27,7 @@ const features = [
       },
       {
         title: 'Udemy 강의',
-        description: '계정 공유를 통한 Udemy 플랫폼 강의 무료 이용',
+        description: 'Udemy 플랫폼 강좌 시청 무료',
         icon: VideoCameraIcon,
       },
     ],
