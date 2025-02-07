@@ -47,7 +47,7 @@ export default function ShowoffSection() {
         {/* COMMIT 타이포그래피 */}
         <div ref={textRef} className="text-center mb-24">
           <div className="text-7xl sm:text-8xl md:text-9xl font-bold tracking-tight">
-            {'COMMIT'.split('').map((letter, index) => (
+            {'COMIT'.split('').map((letter, index) => (
               <span
                 key={index}
                 className="letter inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400"

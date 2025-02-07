@@ -3,7 +3,25 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { UserCircleIcon, BookOpenIcon, DocumentTextIcon, UserGroupIcon, BuildingOfficeIcon, PhotoIcon, CalendarIcon, AcademicCapIcon, InformationCircleIcon, DocumentDuplicateIcon, BookmarkIcon, NewspaperIcon, EnvelopeIcon, FilmIcon } from '@heroicons/react/24/outline';
+import { 
+  UserCircleIcon, 
+  BookOpenIcon,
+  DocumentTextIcon,
+  CalendarIcon, 
+  AcademicCapIcon, 
+  InformationCircleIcon, 
+  DocumentDuplicateIcon, 
+  BookmarkIcon, 
+  NewspaperIcon, 
+  EnvelopeIcon,
+  ArrowTopRightOnSquareIcon,
+  ClipboardDocumentListIcon,
+  PhotoIcon,
+  UsersIcon,
+  SparklesIcon,
+  PaintBrushIcon,
+  PencilSquareIcon,
+} from '@heroicons/react/24/outline';
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -12,6 +30,7 @@ interface NavItem {
   href: string;
   subheading?: string;
   icon?: React.ElementType;
+  useStroke?: boolean;
 }
 
 interface NavSection {
@@ -32,8 +51,8 @@ export default function Header() {
       href: '/about',
       items: [
         { name: '소개', href: '/about', subheading: '동아리 소개와 가치', icon: InformationCircleIcon },
-        { name: '조직도', href: '/about/organization', subheading: '임원진 소개', icon: UserGroupIcon },
-        { name: 'CI', href: '/about/ci', subheading: '동아리 아이덴티티', icon: BuildingOfficeIcon },
+        { name: '조직도', href: '/about/organization', subheading: '임원진 소개', icon: UsersIcon, useStroke: true },
+        { name: 'CI', href: '/about/ci', subheading: '동아리 아이덴티티', icon: PaintBrushIcon, useStroke: true },
         { name: '연락처', href: '/about/contact', subheading: '문의하기', icon: EnvelopeIcon },
       ],
     },
@@ -41,9 +60,9 @@ export default function Header() {
       name: '기록의 숲',
       href: '/community',
       items: [
-        { name: '블로그', href: '/community/blog', subheading: '개발 이야기', icon: DocumentDuplicateIcon },
-        { name: '학습기록', href: '/community/study', subheading: '스터디/세션 기록', icon: BookOpenIcon },
-        { name: '미디어관', href: '/community/media', subheading: '활동 사진과 영상', icon: FilmIcon },
+        { name: '블로그', href: '/community/blog', subheading: '개발 이야기', icon: PencilSquareIcon },
+        { name: '학습기록', href: '/community/study', subheading: '스터디/세션 기록', icon: ClipboardDocumentListIcon },
+        { name: '미디어관', href: '/community/media', subheading: '활동 사진과 영상', icon: PhotoIcon, useStroke: true },
       ],
     },
     {
@@ -78,8 +97,8 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="fixed top-0 w-full bg-black text-white z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="fixed top-0 w-full bg-black z-50">
+      <div className="max-w-7xl mx-auto px-8">
         <div className="flex items-center justify-between h-[64px]">
           {/* 로고 */}
           <Link href="/" className="flex items-center space-x-2">
@@ -93,7 +112,7 @@ export default function Header() {
                 priority
               />
             </div>
-            <span className="text-[15px] font-extrabold">
+            <span className="text-[15px] font-extrabold text-white">
               Comit
             </span>
           </Link>
@@ -124,53 +143,55 @@ export default function Header() {
                   {/* 네비게이션 드롭다운 */}
                   <AnimatePresence>
                     {activeDropdown === section.name && (
-                      <motion.div 
-                        initial={{ opacity: 0, y: -5 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -5 }}
-                        transition={{ duration: 0.2, ease: "easeOut" }}
-                        className="absolute mt-1 w-64 bg-black/60 backdrop-blur-md rounded-2xl shadow-lg py-1 border-none"
-                        style={{ 
-                          left: '50%',
-                          transform: 'translate(-50%, -4px)'
-                        }}
-                      >
-                        {section.items.map((item, index) => (
-                          <motion.div
-                            key={item.name}
-                            initial={{ opacity: 0, y: -10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ 
-                              duration: 0.2,
-                              delay: index * 0.05,
-                              ease: "easeOut"
-                            }}
-                          >
-                            <Link
-                              href={item.href}
-                              className="block px-2.5 py-2 transition-colors group"
+                      <div className="absolute left-1/2 -translate-x-1/2"> {/* motion.div와 transform 속성 충돌 해결을 위한 wrapper div */}
+                        <motion.div 
+                          initial={{ opacity: 0, y: -5 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -5 }}
+                          transition={{ duration: 0.2, ease: "easeOut" }}
+                          className="mt-[6px] w-64 bg-black/70 backdrop-blur-md rounded-2xl shadow-lg py-3 border-none"
+                        >
+                          {section.items.map((item, index) => (
+                            <motion.div
+                              key={item.name}
+                              initial={{ opacity: 0, y: -10 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              transition={{ 
+                                duration: 0.2,
+                                delay: index * 0.05,
+                                ease: "easeOut"
+                              }}
                             >
-                              <div className="flex items-start ml-2">
-                                {item.icon && (
-                                  <div className="p-1.5 bg-gray-700/50 rounded-lg mr-2.5 transition-colors group-hover:bg-gray-600/50">
-                                    <item.icon className="h-4 w-4 text-gray-300 transition-colors group-hover:text-white group-hover:fill-white" />
-                                  </div>
-                                )}
-                                <div>
-                                  <div className="text-[14px] font-medium text-gray-200 group-hover:text-white">
-                                    {item.name}
-                                  </div>
-                                  {item.subheading && (
-                                    <div className="text-[12px] text-gray-400 transition-colors group-hover:text-white">
-                                      {item.subheading}
-                                    </div>
+                              <Link
+                                href={item.href}
+                                className="block px-2.5 py-2 transition-colors group"
+                              >
+                                <div className="flex items-center ml-2">
+                                  {item.icon && (
+                                    <div className="w-10 h-10 flex items-center justify-center group-hover:bg-white rounded-lg mr-2.5 transition-colors bg-gray-600/50">
+                                      <item.icon 
+                                        className={`h-5 w-5 text-gray-300 transition-colors group-hover:text-white group-hover:fill-black ${
+                                          item.useStroke ? 'group-hover:stroke-black' : ''
+                                        }`}
+                                      />
+                                    </div> 
                                   )}
+                                  <div>
+                                    <div className="text-[15px] font-medium text-gray-200 group-hover:text-white">
+                                      {item.name}
+                                    </div>
+                                    {item.subheading && (
+                                      <div className="text-[13px] tracking-tight text-gray-400 transition-colors group-hover:text-white">
+                                        {item.subheading}
+                                      </div>
+                                    )}
+                                  </div>
                                 </div>
-                              </div>
-                            </Link>
-                          </motion.div>
-                        ))}
-                      </motion.div>
+                              </Link>
+                            </motion.div>
+                          ))}
+                        </motion.div>
+                      </div>
                     )}
                   </AnimatePresence>
                 </div>
@@ -179,36 +200,54 @@ export default function Header() {
           </div>
 
           {/* 프로필 아이콘과 드롭다운 */}
-          <div className="relative" ref={dropdownRef}>
+          <div 
+            className="relative" 
+            onMouseEnter={() => setIsDropdownOpen(true)}
+            onMouseLeave={() => setIsDropdownOpen(false)}
+          >
             <button
               className="p-2 text-gray-300 hover:text-white transition-colors"
               aria-label="프로필"
-              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             >
               <UserCircleIcon className="w-8 h-8" />
             </button>
 
             {/* 드롭다운 메뉴 */}
-            {isDropdownOpen && (
-              <div className="absolute right-0 -translate-x-2 mt-2 w-[180px] bg-black rounded-2xl shadow-lg py-1.5 border-none border-gray-800">
-                <a
-                  href="https://manage.commit-club.com"
-                  className="block px-3.5 py-2.5 text-[14px] text-gray-200 hover:bg-gray-700/50 transition-colors rounded-xl mx-1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  CAMS
-                </a>
-                <a
-                  href="https://admin.commit-club.com"
-                  className="block px-3.5 py-2.5 text-[14px] text-gray-200 hover:bg-gray-700/50 transition-colors rounded-xl mx-1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  코밋관리체계
-                </a>
-              </div>
-            )}
+            <AnimatePresence>
+              {isDropdownOpen && (
+                <div className="absolute right-0 -translate-x-2">
+                  <motion.div 
+                    initial={{ opacity: 0, y: -5 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -5 }}
+                    transition={{ duration: 0.2, ease: "easeOut" }}
+                    className="mt-[4px] w-64 bg-black/70 backdrop-blur-md rounded-2xl shadow-lg py-2 border-none"
+                  >
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.2, ease: "easeOut" }}
+                    >
+                      <a
+                        href="https://comit-ams-jungjuns-projects.vercel.app/"
+                        className="block px-2.5 py-2 transition-colors group"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <div className="flex items-center ml-2">
+                          <div className="w-10 h-10 flex items-center justify-center bg-gray-700/50 rounded-lg mr-2.5 transition-colors group-hover:bg-white">
+                            <ArrowTopRightOnSquareIcon className="h-5 w-5 text-gray-300 transition-colors group-hover:stroke-black group-hover:fill-white stroke-2" />
+                          </div>
+                          <div className="text-[15px] font-medium text-gray-200 group-hover:text-white">
+                            COMS(코밋 스페이스)
+                          </div>
+                        </div>
+                      </a>
+                    </motion.div>
+                  </motion.div>
+                </div>
+              )}
+            </AnimatePresence>
           </div>
         </div>
       </div>

@@ -170,4 +170,9 @@ export interface MediaPost {
   createdAt: string;
   category: 'event' | 'activity' | 'announcement';
   tags: string[];
+}
+
+export interface TechStack {
+  name: string;
+  icon: string;
 } 

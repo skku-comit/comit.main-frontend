@@ -29,7 +29,7 @@ export default function CTASection() {
             함께 성장할 준비가 되셨나요?
           </h2>
           <p className="text-xl text-blue-100 mb-12 max-w-3xl mx-auto">
-            COMIT과 함께라면, 여러분의 개발자 꿈을 현실로 만들 수 있습니다.
+            Comit과 함께라면, 여러분의 개발자 꿈을 현실로 만들 수 있습니다.
             지금 바로 시작하세요!
           </p>
 

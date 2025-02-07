@@ -8,7 +8,7 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Contact</h3>
             <p className="mt-4 text-base text-gray-500">
               성균관대학교 자연과학캠퍼스<br />
-              이메일: commit@skku.edu
+              이메일: comit@skku.edu
             </p>
           </div>
           

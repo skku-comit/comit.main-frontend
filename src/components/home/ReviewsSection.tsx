@@ -8,7 +8,7 @@ import { StarIcon } from '@heroicons/react/24/solid';
 const reviews = [
   {
     id: 1,
-    content: "코딩을 처음 시작했을 때는 막막했는데, COMMIT에서 체계적으로 학습하면서 실력이 크게 향상되었어요. 특히 선배들의 멘토링이 큰 도움이 되었습니다.",
+    content: "코딩을 처음 시작했을 때는 막막했는데, Comit에서 체계적으로 학습하면서 실력이 크게 향상되었어요. 특히 선배들의 멘토링이 큰 도움이 되었습니다.",
     author: "김OO",
     role: "10기 학부생",
     image: "/images/reviews/review1.jpg",
@@ -49,7 +49,7 @@ export default function ReviewsSection() {
             선배들의 생생한 후기
           </h2>
           <p className="text-xl text-gray-600">
-            COMMIT에서 성장한 선배들의 이야기를 들어보세요
+            Comit에서 성장한 선배들의 이야기를 들어보세요
           </p>
         </motion.div>
 
