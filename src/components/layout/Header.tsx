@@ -113,7 +113,7 @@ export default function Header() {
               />
             </div>
             <span className="text-[15px] font-extrabold text-white">
-              Comit
+              CoMit
             </span>
           </Link>
 

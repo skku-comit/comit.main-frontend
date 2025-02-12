@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="ko" suppressHydrationWarning>
       <body suppressHydrationWarning>
         <Header />
-        <main className="min-h-screen pt-16">
+        <main className="min-h-screen pt-16 overflow-x-hidden">
           {children}
         </main>
         <Footer />
