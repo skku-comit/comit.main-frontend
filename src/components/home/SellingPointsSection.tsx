@@ -8,37 +8,44 @@ const features = [
     title: '체계적인 학습',
     description: '스터디와 세션을 통한 단계별 성장',
     icon: BookOpenIcon,
-    color: 'text-blue-500',
+    gradient: 'from-purple-500 to-blue-500'
   },
   {
-    title: '학습 기록',
-    description: '포트폴리오 시스템으로 성장 과정 기록',
+    title: '실전 프로젝트',
+    description: '팀 프로젝트로 배우는 실무 경험',
     icon: DocumentTextIcon,
-    color: 'text-green-500',
+    gradient: 'from-blue-500 to-cyan-500'
   },
   {
-    title: '네트워킹',
-    description: '프로젝트와 활동을 통한 실전 경험',
+    title: '개발자 네트워킹',
+    description: '선후배와 함께하는 성장 커뮤니티',
     icon: UserGroupIcon,
-    color: 'text-purple-500',
-  },
+    gradient: 'from-cyan-500 to-emerald-500'
+  }
 ];
 
 export default function SellingPointsSection() {
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
+    <section className="relative bg-black overflow-hidden">
+      {/* 배경 그리드 패턴 */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 -mt-8 bg-[linear-gradient(to_right,rgba(255,255,255,0.07)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.07)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            개발자를 꿈꾸는 모든 학생들을 위해서- <br/>
-            Comit에서 자유롭게 지식을 공유하고 성장하세요
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Why CoMit?
           </h2>
+          <p className="text-lg text-gray-400">
+            코밋에서만 경험할 수 있는 특별한 가치
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -49,13 +56,21 @@ export default function SellingPointsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="relative p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+              className="relative group"
             >
-              <div className={`inline-block p-4 rounded-lg ${feature.color} bg-opacity-10 mb-4`}>
-                <feature.icon className={`h-8 w-8 ${feature.color}`} />
+              <div className="relative z-10 bg-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-800 hover:border-gray-700 transition-all duration-300">
+                <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-5 transition-opacity rounded-2xl`} />
+                
+                <div className={`inline-flex p-3 rounded-xl bg-gradient-to-br ${feature.gradient} mb-5`}>
+                  <feature.icon className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-400">
+                  {feature.description}
+                </p>
               </div>
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
             </motion.div>
           ))}
         </div>

@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import { 
   AcademicCapIcon, 
   BookOpenIcon, 
@@ -66,8 +65,11 @@ const features = [
 
 export default function FeaturesSection() {
   return (
-    <section className="py-24 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative bg-black overflow-hidden py-24">
+      {/* 배경 그리드 패턴 */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -75,10 +77,10 @@ export default function FeaturesSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             다양한 혜택과 기회
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-400">
             COMIT에서 제공하는 특별한 경험들을 만나보세요
           </p>
         </motion.div>
@@ -92,7 +94,7 @@ export default function FeaturesSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-8">
+              <h3 className="text-2xl font-bold text-white mb-8">
                 {category.category}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -103,15 +105,17 @@ export default function FeaturesSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6"
+                    className="relative group"
                   >
-                    <div className="flex items-center mb-4">
-                      <div className="p-2 bg-blue-100 rounded-lg mr-4">
-                        <feature.icon className="h-6 w-6 text-blue-600" />
+                    <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-800 hover:border-gray-700 transition-all duration-300 p-6">
+                      <div className="flex items-center mb-4">
+                        <div className="p-2 bg-white/5 rounded-lg mr-4 group-hover:bg-white/10 transition-colors">
+                          <feature.icon className="h-6 w-6 text-purple-400" />
+                        </div>
+                        <h4 className="text-lg font-semibold text-white">{feature.title}</h4>
                       </div>
-                      <h4 className="text-lg font-semibold">{feature.title}</h4>
+                      <p className="text-gray-400">{feature.description}</p>
                     </div>
-                    <p className="text-gray-600">{feature.description}</p>
                   </motion.div>
                 ))}
               </div>

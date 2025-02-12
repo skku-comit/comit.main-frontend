@@ -24,7 +24,7 @@ export default function HeroSection() {
               maskImage: 'radial-gradient(circle at center, black 30%, transparent 90%)',
               WebkitMaskImage: 'radial-gradient(circle at center, black 30%, transparent 90%)',
             }}
-          />
+          />  
         </motion.div>
             
         {/* 하단 그라데이션 레이어 */}
@@ -117,7 +117,7 @@ export default function HeroSection() {
                   <div className="flex gap-2">
                     {/* Close 버튼 */}
                     <div className="w-3 h-3 rounded-full bg-[#FF5F56] hover:bg-[#FF5F56]/90 relative group cursor-pointer transition-all">
-                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-80">
                         <svg className="w-3 h-3 text-black" viewBox="0 0 24 24" fill="currentColor">
                           <path d="M6 18L18 6M6 6l12 12" strokeWidth="3" stroke="currentColor"/>
                         </svg>
@@ -125,7 +125,7 @@ export default function HeroSection() {
                     </div>
                     {/* Minimize 버튼 */}
                     <div className="w-3 h-3 rounded-full bg-[#FFBD2E] hover:bg-[#FFBD2E]/90 relative group cursor-pointer transition-all">
-                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-80">
                         <svg className="w-3 h-3 text-black" viewBox="0 0 24 24" fill="currentColor">
                           <path d="M5 12h14" strokeWidth="3" stroke="currentColor"/>
                         </svg>
@@ -133,7 +133,7 @@ export default function HeroSection() {
                     </div>
                     {/* Maximize 버튼 */}
                     <div className="w-3 h-3 rounded-full bg-[#28C940] hover:bg-[#28C940]/90 relative group cursor-pointer transition-all">
-                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-80">
                         {/* <svg className="w-2 h-2 text-black" viewBox="0 0 24 24" fill="currentColor">
                           <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/>
                         </svg> */}
@@ -157,7 +157,7 @@ export default function HeroSection() {
                     <span className="text-white">.</span>
                     <span className="text-emerald-400">log</span>
                     <span className="text-white">(</span>
-                    <span className="text-amber-200">"<span className='group-hover:bg-white/30 transition-colors'>Welcome to CoMit!</span>"</span>
+                    <span className="text-amber-200">"<span className='group-hover:bg-white/20 transition-colors'>Welcome to CoMit!</span>"</span>
                     <span className="text-white">);</span>
                   </div>
                   <div className="text-white group"><button className='group-hover:opacity-100 opacity-0 rounded-full bg-red-600/85 w-2 h-2 mr-2'></button>{'}'};</div>
@@ -184,7 +184,7 @@ export default function HeroSection() {
                     <span className="text-white">.</span>
                     <span className="text-emerald-400">log</span>
                     <span className="text-white">(</span>
-                    <span className="text-amber-200 group-hover:bg-white/10 transition-colors">"Remember: Every step counts!"</span>
+                    <span className="text-amber-200 transition-colors">"Remember: Every step counts!"</span>
                     <span className="text-white">);</span>
                   </div>
                   <div className="group"><button className='group-hover:opacity-100 opacity-0 rounded-full bg-red-600/85 w-2 h-2 mr-10'></button>

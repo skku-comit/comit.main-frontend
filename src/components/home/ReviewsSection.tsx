@@ -1,96 +1,93 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import Image from 'next/image';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import { StarIcon } from '@heroicons/react/24/solid';
+import Image from 'next/image';
 
 const reviews = [
   {
-    id: 1,
-    content: "코딩을 처음 시작했을 때는 막막했는데, Comit에서 체계적으로 학습하면서 실력이 크게 향상되었어요. 특히 선배들의 멘토링이 큰 도움이 되었습니다.",
-    author: "김OO",
-    role: "10기 학부생",
-    image: "/images/reviews/review1.jpg",
-    rating: 5,
+    content: "코밋에서의 경험이 제 개발자 커리어의 시작점이었어요. 선배들의 멘토링 덕분에 빠르게 성장할 수 있었죠.",
+    author: "19학번 홍길동",
+    role: "현) 네이버 프론트엔드 개발자",
+    image: "/images/reviews/avatar1.jpg"
   },
   {
-    id: 2,
-    content: "동아리방에서 자유롭게 공부하고 토론할 수 있는 환경이 정말 좋았어요. 프로젝트도 함께하면서 실전 경험을 쌓을 수 있었죠.",
-    author: "이OO",
-    role: "9기 졸업생",
-    image: "/images/reviews/review2.jpg",
-    rating: 5,
+    content: "체계적인 스터디와 실전 프로젝트 경험이 실무에서 큰 도움이 되었습니다. 특히 협업 프로세스를 미리 경험해본 게 좋았어요.",
+    author: "20학번 김철수",
+    role: "현) 카카오 백엔드 개발자",
+    image: "/images/reviews/avatar2.jpg"
   },
   {
-    id: 3,
-    content: "현업에 계신 선배들의 특강을 통해 실무에 대한 인사이트를 얻을 수 있었고, 진로 결정에 큰 도움이 되었습니다.",
-    author: "박OO",
-    role: "8기 졸업생",
-    image: "/images/reviews/review3.jpg",
-    rating: 5,
-  },
+    content: "개발을 처음 시작할 때 막막했는데, 코밋에서 만난 동료들과 함께하며 즐겁게 성장했어요. 지금도 좋은 인연으로 이어지고 있죠.",
+    author: "21학번 이영희",
+    role: "현) 토스 iOS 개발자",
+    image: "/images/reviews/avatar3.jpg"
+  }
 ];
 
 export default function ReviewsSection() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"]
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
   return (
-    <section className="py-24 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
+    <section className="relative bg-black overflow-hidden py-24">
+      {/* 배경 효과 */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+      </div>
+
+      <div ref={containerRef} className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            선배들의 생생한 후기
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Alumni Stories
           </h2>
-          <p className="text-xl text-gray-600">
-            Comit에서 성장한 선배들의 이야기를 들어보세요
+          <p className="text-lg text-gray-400">
+            코밋과 함께 성장한 선배들의 이야기
           </p>
         </motion.div>
 
-        <div 
-          ref={containerRef}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {reviews.map((review, index) => (
             <motion.div
-              key={review.id}
+              key={index}
+              style={{ y }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow"
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              className="relative group"
             >
-              {/* 별점 */}
-              <div className="flex mb-4">
-                {[...Array(review.rating)].map((_, i) => (
-                  <StarIcon key={i} className="h-5 w-5 text-yellow-400" />
-                ))}
-              </div>
-
-              {/* 후기 내용 */}
-              <p className="text-gray-600 mb-6 min-h-[100px]">
-                "{review.content}"
-              </p>
-
-              {/* 작성자 정보 */}
-              <div className="flex items-center">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-                  <Image
-                    src={review.image}
-                    alt={review.author}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div>
-                  <p className="font-semibold text-gray-900">{review.author}</p>
-                  <p className="text-sm text-gray-500">{review.role}</p>
+              <div className="relative z-10 bg-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-800 hover:border-gray-700 transition-all duration-300">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
+                
+                <div className="relative">
+                  <p className="text-gray-300 mb-6">"{review.content}"</p>
+                  <div className="flex items-center gap-4">
+                    <div className="relative w-12 h-12 rounded-full overflow-hidden bg-gray-800">
+                      <Image
+                        src={review.image}
+                        alt={review.author}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div>
+                      <div className="font-medium text-white">{review.author}</div>
+                      <div className="text-sm text-gray-400">{review.role}</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>
