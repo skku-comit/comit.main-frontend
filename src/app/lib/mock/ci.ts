@@ -1,4 +1,4 @@
-import { ClubIdentity } from '@/app/types';
+import { ClubIdentity } from '@/app/types'
 
 export const clubIdentityData: ClubIdentity[] = [
   {
@@ -25,4 +25,4 @@ export const clubIdentityData: ClubIdentity[] = [
     imageUrl: '/images/ci/template.png',
     downloadUrl: '/downloads/commit-template.zip'
   }
-]; 
+]

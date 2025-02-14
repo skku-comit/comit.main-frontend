@@ -1,5 +1,5 @@
-import { Study } from '../../types';
-import { members } from './members';
+import { Study } from '../../types'
+import { members } from './members'
 
 export const studies: Study[] = [
   {
@@ -13,7 +13,7 @@ export const studies: Study[] = [
     schedule: '매주 화요일 18:00',
     materials: ['React 공식문서', 'Kent C. Dodds 블로그'],
     githubRepo: 'https://github.com/commit/react-advanced',
-    status: 'ongoing',
+    status: 'ongoing'
   },
   {
     id: '2',
@@ -26,7 +26,7 @@ export const studies: Study[] = [
     schedule: '매주 목요일 19:00',
     materials: ['백준 온라인 저지', 'LeetCode'],
     githubRepo: 'https://github.com/commit/algorithm-study',
-    status: 'ongoing',
+    status: 'ongoing'
   },
   {
     id: '3',
@@ -39,6 +39,6 @@ export const studies: Study[] = [
     schedule: '매주 수요일 17:00',
     materials: ['Spring 공식문서', '인프런 강의'],
     githubRepo: 'https://github.com/commit/spring-basic',
-    status: 'upcoming',
+    status: 'upcoming'
   }
-]; 
+]

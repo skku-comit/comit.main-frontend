@@ -1,4 +1,4 @@
-import { Member } from '@/app/types';
+import { Member } from '@/app/types'
 
 export const executives: Member[] = [
   {
@@ -11,7 +11,7 @@ export const executives: Member[] = [
     skills: ['React', 'TypeScript', 'Node.js', 'Python'],
     github: 'https://github.com/president',
     blog: 'https://velog.io/@president',
-    isActive: true,
+    isActive: true
   },
   {
     id: '2',
@@ -23,7 +23,7 @@ export const executives: Member[] = [
     skills: ['Java', 'Spring', 'MySQL', 'AWS'],
     github: 'https://github.com/vice-president',
     blog: 'https://velog.io/@vice-president',
-    isActive: true,
+    isActive: true
   },
   {
     id: '3',
@@ -35,7 +35,7 @@ export const executives: Member[] = [
     skills: ['React', 'Vue.js', 'JavaScript'],
     github: 'https://github.com/academic',
     linkedIn: 'https://linkedin.com/in/academic',
-    isActive: true,
+    isActive: true
   },
   {
     id: '4',
@@ -46,9 +46,9 @@ export const executives: Member[] = [
     description: '동아리 SNS 관리와 컨텐츠 제작을 담당합니다.',
     skills: ['Figma', 'Adobe XD', 'React'],
     blog: 'https://blog.naver.com/pr-head',
-    isActive: true,
+    isActive: true
   }
-];
+]
 
 export const members: Member[] = [
   ...executives,
@@ -61,7 +61,7 @@ export const members: Member[] = [
     description: '프론트엔드 개발에 관심이 많은 10기 부원입니다.',
     skills: ['React', 'JavaScript'],
     github: 'https://github.com/member1',
-    isActive: true,
-  },
+    isActive: true
+  }
   // ... 더 많은 일반 부원 데이터
-]; 
+]

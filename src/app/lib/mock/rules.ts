@@ -1,4 +1,4 @@
-import { Rule } from '../../types';
+import { Rule } from '../../types'
 
 export const rules: Rule[] = [
   {
@@ -14,7 +14,7 @@ export const rules: Rule[] = [
 3. 실무 중심의 프로젝트 경험 제공
 4. 개발자 커뮤니티 형성 및 네트워킹
     `,
-    lastUpdated: '2024-01-01',
+    lastUpdated: '2024-01-01'
   },
   {
     id: '2',
@@ -28,7 +28,7 @@ export const rules: Rule[] = [
 2. 회원은 동아리의 시설과 기자재를 이용할 수 있다.
 3. 회원은 회칙을 준수하고 회비를 납부할 의무가 있다.
     `,
-    lastUpdated: '2024-01-01',
+    lastUpdated: '2024-01-01'
   },
   {
     id: '3',
@@ -41,6 +41,6 @@ export const rules: Rule[] = [
 3. 학술부장 1명
 4. 홍보부장 1명
     `,
-    lastUpdated: '2024-01-01',
+    lastUpdated: '2024-01-01'
   }
-]; 
+]
