@@ -1,5 +1,5 @@
-import { ClubReview } from '../../types';
-import { members } from './members';
+import { ClubReview } from '../../types'
+import { members } from './members'
 
 export const reviews: ClubReview[] = [
   {
@@ -9,7 +9,7 @@ export const reviews: ClubReview[] = [
     rating: 5,
     generation: 9,
     createdAt: '2024-03-15',
-    isAnonymous: false,
+    isAnonymous: false
   },
   {
     id: '2',
@@ -18,7 +18,7 @@ export const reviews: ClubReview[] = [
     rating: 5,
     generation: 8,
     createdAt: '2024-03-14',
-    isAnonymous: false,
+    isAnonymous: false
   },
   {
     id: '3',
@@ -27,6 +27,6 @@ export const reviews: ClubReview[] = [
     rating: 4,
     generation: 9,
     createdAt: '2024-03-10',
-    isAnonymous: true,
+    isAnonymous: true
   }
-]; 
+]

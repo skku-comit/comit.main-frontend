@@ -1,5 +1,5 @@
-import { Event } from '../../types';
-import { members } from './members';
+import { Event } from '../../types'
+import { members } from './members'
 
 export const events: Event[] = [
   {
@@ -11,7 +11,7 @@ export const events: Event[] = [
     type: 'general',
     location: '학생회관 500호',
     organizer: members[0],
-    isPublic: true,
+    isPublic: true
   },
   {
     id: '2',
@@ -23,7 +23,7 @@ export const events: Event[] = [
     location: '동아리방',
     organizer: members[2],
     participants: [members[2], members[4], members[1]],
-    isPublic: true,
+    isPublic: true
   },
   {
     id: '3',
@@ -35,7 +35,7 @@ export const events: Event[] = [
     location: '성균관대학교 새천년홀',
     organizer: members[1],
     participants: [...members],
-    isPublic: true,
+    isPublic: true
   },
   {
     id: '4',
@@ -46,6 +46,6 @@ export const events: Event[] = [
     type: 'seminar',
     location: '온라인',
     organizer: members[3],
-    isPublic: true,
+    isPublic: true
   }
-]; 
+]

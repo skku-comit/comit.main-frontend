@@ -1,7 +1,7 @@
-'use client';
+'use client'
 
-import { motion } from 'framer-motion';
-import { BookOpenIcon, DocumentTextIcon, UserGroupIcon } from '@heroicons/react/24/outline';
+import { motion } from 'framer-motion'
+import { BookOpenIcon, DocumentTextIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 
 const features = [
   {
@@ -22,33 +22,29 @@ const features = [
     icon: UserGroupIcon,
     gradient: 'from-cyan-500 to-emerald-500'
   }
-];
+]
 
 export default function SellingPointsSection() {
   return (
-    <section className="relative bg-black overflow-hidden">
+    <section className="relative overflow-hidden bg-black">
       {/* 배경 그리드 패턴 */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 -mt-8 bg-[linear-gradient(to_right,rgba(255,255,255,0.07)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.07)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <motion.div 
+      <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="mb-16 text-center"
         >
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Why CoMit?
-          </h2>
-          <p className="text-lg text-gray-400">
-            코밋에서만 경험할 수 있는 특별한 가치
-          </p>
+          <h2 className="mb-4 text-3xl font-bold text-white">Why CoMit?</h2>
+          <p className="text-lg text-gray-400">코밋에서만 경험할 수 있는 특별한 가치</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -56,25 +52,23 @@ export default function SellingPointsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="relative group"
+              className="group relative"
             >
-              <div className="relative z-10 bg-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-800 hover:border-gray-700 transition-all duration-300">
-                <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-5 transition-opacity rounded-2xl`} />
-                
-                <div className={`inline-flex p-3 rounded-xl bg-gradient-to-br ${feature.gradient} mb-5`}>
+              <div className="relative z-10 rounded-2xl border border-gray-800 bg-gray-900/50 p-8 backdrop-blur-sm transition-all duration-300 hover:border-gray-700">
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} rounded-2xl opacity-0 transition-opacity group-hover:opacity-5`}
+                />
+
+                <div className={`inline-flex rounded-xl bg-gradient-to-br p-3 ${feature.gradient} mb-5`}>
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-400">
-                  {feature.description}
-                </p>
+                <h3 className="mb-3 text-xl font-semibold text-white">{feature.title}</h3>
+                <p className="text-gray-400">{feature.description}</p>
               </div>
             </motion.div>
           ))}
         </div>
       </div>
     </section>
-  );
-} 
+  )
+}

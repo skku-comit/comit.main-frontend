@@ -1,5 +1,5 @@
-import ApplicationSection from '@/components/join/ApplicationSection';
-import FAQSection from '@/components/join/FAQSection';
+import ApplicationSection from '@/components/join/ApplicationSection'
+import FAQSection from '@/components/join/FAQSection'
 
 export default function JoinPage() {
   return (
@@ -7,5 +7,5 @@ export default function JoinPage() {
       <ApplicationSection />
       <FAQSection />
     </div>
-  );
-} 
+  )
+}

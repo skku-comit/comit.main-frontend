@@ -1,5 +1,5 @@
-import { BlogPost } from '@/app/types';
-import { members } from './members';
+import { BlogPost } from '@/app/types'
+import { members } from './members'
 
 export const posts: BlogPost[] = [
   // 동아리 회고
@@ -17,10 +17,10 @@ export const posts: BlogPost[] = [
     likes: 45,
     categorySpecificData: {
       semester: '2024-1',
-      activities: ['React 스터디', '알고리즘 스터디', '해커톤', '종강총회'],
+      activities: ['React 스터디', '알고리즘 스터디', '해커톤', '종강총회']
     }
   },
-  
+
   // 스터디 기록
   {
     id: '2',
@@ -37,10 +37,10 @@ export const posts: BlogPost[] = [
     categorySpecificData: {
       difficulty: 'intermediate',
       prerequisites: ['React 기초', 'HTTP 통신 이해'],
-      references: ['React Query 공식문서', 'TkDodo의 블로그'],
+      references: ['React Query 공식문서', 'TkDodo의 블로그']
     }
   },
-  
+
   // 기술 아티클
   {
     id: '3',
@@ -57,11 +57,7 @@ export const posts: BlogPost[] = [
     categorySpecificData: {
       studyName: 'Next.js 심화 스터디',
       weekNumber: 2,
-      learningPoints: [
-        'App Router vs Pages Router',
-        'Server Components',
-        'Data Fetching',
-      ],
+      learningPoints: ['App Router vs Pages Router', 'Server Components', 'Data Fetching']
     }
   },
   {
@@ -79,11 +75,7 @@ export const posts: BlogPost[] = [
     categorySpecificData: {
       studyName: '알고리즘 스터디',
       weekNumber: 4,
-      learningPoints: [
-        'DFS 구현 방법',
-        'BFS 구현 방법',
-        '실전 문제 풀이',
-      ],
+      learningPoints: ['DFS 구현 방법', 'BFS 구현 방법', '실전 문제 풀이']
     }
   },
   {
@@ -101,7 +93,7 @@ export const posts: BlogPost[] = [
     categorySpecificData: {
       difficulty: 'advanced',
       prerequisites: ['TypeScript 기초', '타입 시스템 이해'],
-      references: ['TypeScript 공식문서', 'Type Challenge'],
+      references: ['TypeScript 공식문서', 'Type Challenge']
     }
   }
-]; 
+]

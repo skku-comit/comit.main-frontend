@@ -1,5 +1,5 @@
-import RulesSection from '@/components/resources/RulesSection';
-import CalendarSection from '@/components/resources/CalendarSection';
+import RulesSection from '@/components/resources/RulesSection'
+import CalendarSection from '@/components/resources/CalendarSection'
 
 export default function ResourcesPage() {
   return (
@@ -7,5 +7,5 @@ export default function ResourcesPage() {
       <RulesSection />
       <CalendarSection />
     </div>
-  );
-} 
+  )
+}
