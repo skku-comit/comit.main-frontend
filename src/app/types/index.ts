@@ -145,7 +145,7 @@ export interface Partner {
 }
 
 // 기존 타입들에 추가
-export interface CI {
+export interface ClubIdentity {
   id: string;
   type: 'logo' | 'mascot' | 'template';
   title: string;

@@ -5,32 +5,44 @@ import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+interface StatItem {
+  number: number;
+  label: string;
+  suffix: string;
+}
+
+interface NumberElement extends Element {
+  innerText: string;
+  getAttribute(name: string): string | null;
+}
+
+type GSAPCallback = () => void;
+
 export default function ShowoffSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     
-    const ctx = gsap.context(() => {
+    const ctx = gsap.context((() => {
       // 텍스트 애니메이션
       gsap.to(".text-reveal", {
         backgroundPositionX: "0%",
         stagger: 0.5,
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top center",
+          start: "top 80%",
           end: "bottom center",
           scrub: 1,
         }
       });
 
       // 숫자 카운팅 애니메이션
-      const numbers = gsap.utils.toArray(".number-counter");
-      numbers.forEach((number: any, index) => {
-        const target = parseInt(number.getAttribute("data-target"));
-        const suffix = number.nextElementSibling;
+      const numbers = gsap.utils.toArray<NumberElement>(".number-counter");
+      numbers.forEach((number) => {
+        const target = parseInt(number.getAttribute("data-target") || "0");
+        const suffix = number.nextElementSibling as HTMLElement;
         
-        // 시작할 때 + 기호 숨기기
         if (suffix) suffix.style.opacity = "0";
         
         gsap.to(number, {
@@ -40,10 +52,9 @@ export default function ShowoffSection() {
           snap: { innerText: 1 },
           scrollTrigger: {
             trigger: number,
-            start: "top center+=100",
+            start: "top 75%",
           },
           onComplete: () => {
-            // 카운팅이 끝나면 + 기호 페이드인
             if (suffix) {
               gsap.to(suffix, {
                 opacity: 1,
@@ -54,10 +65,17 @@ export default function ShowoffSection() {
           }
         });
       });
-    });
+    }) as GSAPCallback);
 
     return () => ctx.revert();
   }, []);
+
+  const stats: StatItem[] = [
+    { number: 412, label: "누적 부원", suffix: "" },
+    { number: 70, label: "누적 스터디 개설", suffix: "+" },
+    { number: 24, label: "다뤄진 기술 스택", suffix: "+" },
+    { number: 80, label: "평균 신규 지원", suffix: "+" }
+  ];
 
   return (
     <section ref={sectionRef} className="relative bg-black overflow-hidden py-24">
@@ -82,12 +100,7 @@ export default function ShowoffSection() {
             </div>
 
             <div className="grid grid-cols-2 gap-8">
-              {[
-                { number: 412, label: "누적 부원", suffix: "" },
-                { number: 70, label: "누적 스터디 개설", suffix: "+" },
-                { number: 24, label: "다뤄진 기술 스택", suffix: "+" },
-                { number: 80, label: "평균 신규 지원", suffix: "+" }
-              ].map((stat, index) => (
+              {stats.map((stat, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}

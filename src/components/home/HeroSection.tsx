@@ -97,7 +97,7 @@ export default function HeroSection() {
                   href="/about"
                   className="inline-flex items-center px-3 py-1.5 border-[1.5px] border-gray-300 font-medium rounded-2xl text-gray-300 hover:text-white transition-colors duration-300"
                 >
-                  What's CoMit?
+                  What&apos;s CoMit?
                 </Link>
               </div>
             </motion.div>
@@ -145,8 +145,8 @@ export default function HeroSection() {
                 
                 {/* 코드 내용 */}
                 <div className="px-3 py-6 font-mono text-sm">
-                  <div className="text-purple-400 group"> <button className='group-hover:opacity-100 opacity-0 rounded-full bg-red-600/85 w-2 h-2 mr-2'></button>const</div>
                   <div className="group"><button className='group-hover:opacity-100 opacity-0 rounded-full bg-red-600/85 w-2 h-2 mr-2'></button>
+                  <span className="text-purple-400 group">const </span>
                     <span className="text-blue-400">greet</span>
                     <span className="text-white"> = </span>
                     <span className="text-amber-300">() ={'>'}</span>
@@ -157,7 +157,7 @@ export default function HeroSection() {
                     <span className="text-white">.</span>
                     <span className="text-emerald-400">log</span>
                     <span className="text-white">(</span>
-                    <span className="text-amber-200">"<span className='group-hover:bg-white/20 transition-colors'>Welcome to CoMit!</span>"</span>
+                    <span className="text-amber-200">&apos;<span className='group-hover:bg-white/20 transition-colors'>Welcome to CoMit!</span>&apos;</span>
                     <span className="text-white">);</span>
                   </div>
                   <div className="text-white group"><button className='group-hover:opacity-100 opacity-0 rounded-full bg-red-600/85 w-2 h-2 mr-2'></button>{'}'};</div>
@@ -184,7 +184,7 @@ export default function HeroSection() {
                     <span className="text-white">.</span>
                     <span className="text-emerald-400">log</span>
                     <span className="text-white">(</span>
-                    <span className="text-amber-200 transition-colors">"Remember: Every step counts!"</span>
+                    <span className="text-amber-200 transition-colors">&apos;Remember: Every step counts!&apos;</span>
                     <span className="text-white">);</span>
                   </div>
                   <div className="group"><button className='group-hover:opacity-100 opacity-0 rounded-full bg-red-600/85 w-2 h-2 mr-10'></button>

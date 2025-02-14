@@ -6,11 +6,9 @@ import { usePathname } from 'next/navigation';
 import { 
   UserCircleIcon, 
   BookOpenIcon,
-  DocumentTextIcon,
   CalendarIcon, 
   AcademicCapIcon, 
-  InformationCircleIcon, 
-  DocumentDuplicateIcon, 
+  InformationCircleIcon,  
   BookmarkIcon, 
   NewspaperIcon, 
   EnvelopeIcon,
@@ -18,7 +16,6 @@ import {
   ClipboardDocumentListIcon,
   PhotoIcon,
   UsersIcon,
-  SparklesIcon,
   PaintBrushIcon,
   PencilSquareIcon,
 } from '@heroicons/react/24/outline';
@@ -60,9 +57,9 @@ export default function Header() {
       name: '기록의 숲',
       href: '/community',
       items: [
-        { name: '블로그', href: '/community/blog', subheading: '개발 이야기', icon: PencilSquareIcon },
-        { name: '학습기록', href: '/community/study', subheading: '스터디/세션 기록', icon: ClipboardDocumentListIcon },
-        { name: '미디어관', href: '/community/media', subheading: '활동 사진과 영상', icon: PhotoIcon, useStroke: true },
+        { name: '블로그', href: '/community/blog', subheading: '개발, 그리고 동아리 이야기', icon: PencilSquareIcon },
+        { name: '학습기록', href: '/community/study', subheading: '학기별 스터디/세션 기록', icon: ClipboardDocumentListIcon },
+        { name: '미디어관', href: '/community/media', subheading: '코밋의 행사/이벤트', icon: PhotoIcon, useStroke: true },
       ],
     },
     {
@@ -71,14 +68,14 @@ export default function Header() {
       items: [
         { name: '회칙', href: '/resources/rules', subheading: '동아리 운영 규정', icon: BookmarkIcon },
         { name: '동아리 일정', href: '/resources/calendar', subheading: '주요 일정 안내', icon: CalendarIcon },
-        { name: '도서 현황', href: '/resources/books', subheading: '보유 도서 목록', icon: BookOpenIcon },
+        { name: '도서 현황', href: '/resources/books', subheading: '동아리방 보유도서 목록', icon: BookOpenIcon },
       ],
     },
     {
       name: '가입안내',
       href: '/join',
       items: [
-        { name: '지원하기', href: '/join/apply', subheading: '신입 부원 모집', icon: AcademicCapIcon },
+        { name: '지원하기', href: '/join/apply', subheading: '2025-1 신입부원 모집', icon: AcademicCapIcon },
         { name: '이전 모집 공고', href: '/join/history', subheading: '지난 모집내역', icon: NewspaperIcon },
       ],
     },

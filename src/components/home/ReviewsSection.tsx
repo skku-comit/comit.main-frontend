@@ -73,7 +73,7 @@ export default function ReviewsSection() {
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
                 
                 <div className="relative">
-                  <p className="text-gray-300 mb-6">"{review.content}"</p>
+                  <p className="text-gray-300 mb-6">&apos;{review.content}&apos;</p>
                   <div className="flex items-center gap-4">
                     <div className="relative w-12 h-12 rounded-full overflow-hidden bg-gray-800">
                       <Image
