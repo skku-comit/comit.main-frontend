@@ -9,6 +9,7 @@ const catchPhrase = [
   '교내 최대규모의 중앙 컴퓨터동아리 CoMit'
 ]
 
+
 const features = [
   {
     title: '체계적인 그룹 학습',
@@ -59,6 +60,7 @@ export default function SellingPointsSection() {
       </div>
 
       <div className="relative mx-auto px-4 py-16 max-w-7xl">
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -95,6 +97,7 @@ export default function SellingPointsSection() {
         </motion.div>
 
         <div className="grid grid-cols-1 sm:gap-6 gap-0 md:grid-cols-3">
+
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -139,6 +142,7 @@ export default function SellingPointsSection() {
                     </p>
                   </div>
                 </div>
+
               </div>
             </motion.div>
           ))}
