@@ -5,9 +5,9 @@ import Image from 'next/image'
 import { useRef, useState } from 'react'
 
 const catchPhrase = [
-  '함께하기에 펼쳐진 ',
+  '함께이기에 펼쳐진 ',
    '무한한 가능성.',
-  '중요한 것은 목적지가 아닌, 목적지까지 함께하는 사람입니다. 교내 최대규모의 중앙 컴퓨터동아리 CoMit에서 입문부터 협업, 그리고 도전까지 모든 것을 시작하세요.'
+  '중요한 것은 목적지가 아닌, 그 목적지까지 함께하는 사람입니다. 교내 최대규모의 중앙 컴퓨터동아리 CoMit에서 개발 입문부터 협업, 그리고 다양한 도전까지 모든 것을 시작하세요.'
 
 ]
 
@@ -16,7 +16,7 @@ const features = [
   {
     title: '그룹단위 학습',
     description: '학기 단위로 운영되는 스터디와 세션에 참가하세요. 웹개발과 알고리즘을 포함한 다양한 언어와 프레임워크가 매 학기 다뤄집니다. 개인적으로 공부하고 싶은 분야가 있다면 부담없이 스터디를 개설하여 팀원을 모집하세요.',
-    gradient: 'from-[#7A1CAC] to-[#EBD3F8]]',
+    gradient: 'from-white to-[#EBD3F8]]',
 
     icon: 'cooperation.svg'
   },
@@ -75,9 +75,9 @@ export default function SellingPointsSection() {
           className="lg:my-16 text-center lg:py-10 py-4 my-6"
         >
           <div className="flex flex-col items-center">
-            <p className='lg:text-[60px] sm:text-[2.5rem] text-[2rem] leading-[1.2] font-semibold text-white tracking-tighter'>{catchPhrase[0]}<br className='md:hidden'/>{catchPhrase[1]}</p>
+            <p className='lg:text-[60px] sm:text-[2.5rem] text-[2rem] leading-[1.2] font-semibold text-white tracking-tight md:tracking-tighter'>{catchPhrase[0]}<br className='md:hidden tracking:none md:tracking-tighter'/>{catchPhrase[1]}</p>
             <br />
-            <p className='w-4/5 lg:text-2xl sm:text-xl tracking-tighter font-normal text-gray-300'>{catchPhrase[2]}
+            <p className='w-4/5 lg:text-2xl sm:text-xl tracking-tight md:tracking-tighter font-normal text-gray-300'>{catchPhrase[2]}
             </p>
           </div>
 

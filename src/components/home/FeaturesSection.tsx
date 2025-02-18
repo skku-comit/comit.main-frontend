@@ -75,10 +75,10 @@ export default function FeaturesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mb-16 text-center"
+          className="mb-16 text-center flex flex-col items-center"
         >
-          <h2 className="mb-4 text-3xl font-bold text-white sm:text-4xl">다양한 혜택과 기회</h2>
-          <p className="text-xl text-gray-400">COMIT에서 제공하는 특별한 경험들을 만나보세요</p>
+          <p className="mb-4 text-3xl font-bold text-white sm:text-4xl tracking-tight">부원이 아니라면 절대 누리지 못하는 혜택들</p>
+          <p className="w-4/5 text-xl text-gray-400">CoMit에서는 단순한 스터디 운영뿐만 아니라 장소 및 강좌 제공, 부원들을 위한 정기적인 모임과 네트워크 등 꾸준하고 열성적으로 학습하기에 안성맞춤인 환경 조성에 최선을 다하고 있습니다.</p>
         </motion.div>
 
         <div className="space-y-24">

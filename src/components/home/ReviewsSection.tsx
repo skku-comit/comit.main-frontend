@@ -52,7 +52,7 @@ export default function ReviewsSection() {
           transition={{ duration: 0.8 }}
           className="mb-16 text-center"
         >
-          <h2 className="mb-4 text-3xl font-bold text-white">Alumni Stories</h2>
+          <h2 className="mb-4 text-3xl font-bold text-white">Community Testimonials</h2>
           <p className="text-lg text-gray-400">코밋과 함께 성장한 선배들의 이야기</p>
         </motion.div>
 

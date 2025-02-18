@@ -25,7 +25,7 @@ export default function TechMarquee() {
         duration: 0.6,
         delay: 0.1 // MainElement 애니메이션(0.8s) 완료 후 시작
       }}
-      className="relative w-full px-20"
+      className="relative w-full px-20 hidden md:contents"
     >
       <div
         className="group relative h-[60px] overflow-hidden bg-transparent"
