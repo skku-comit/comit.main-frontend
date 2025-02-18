@@ -10,6 +10,7 @@ const catchPhrase = [
   '중요한 것은 목적지가 아닌, 목적지까지 함께하는 사람입니다. 교내 최대규모의 중앙 컴퓨터동아리 CoMit에서 입문부터 협업, 그리고 도전까지 모든 것을 시작하세요.'
 ]
 
+
 const features = [
   {
     title: '그룹단위 학습',
@@ -150,6 +151,7 @@ export default function SellingPointsSection() {
                     </p>
                   </div>
                 </div>
+
               </div>
             </motion.div>
           ))}
