@@ -75,7 +75,7 @@ export default function SellingPointsSection() {
           className="lg:my-16 text-center lg:py-10 py-4 my-6"
         >
           <div className="flex flex-col items-center">
-            <p className='lg:text-[60px] sm:text-[2.5rem] text-[2rem] leading-[1.2] font-semibold text-white tracking-tight md:tracking-tighter'>{catchPhrase[0]}<br className='md:hidden tracking:none md:tracking-tighter'/>{catchPhrase[1]}</p>
+            <p className='lg:text-[60px] sm:text-[2.5rem] text-[2rem] leading-[1.2] font-bold text-white tracking-tight md:tracking-tighter'>{catchPhrase[0]}<br className='md:hidden tracking:none md:tracking-tighter'/>{catchPhrase[1]}</p>
             <br />
             <p className='w-4/5 lg:text-2xl sm:text-xl tracking-tight md:tracking-tighter font-normal text-gray-300'>{catchPhrase[2]}
             </p>

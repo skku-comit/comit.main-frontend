@@ -31,7 +31,7 @@ export default function ShowoffSection() {
     intervalRef.current = setInterval(() => {
       setDragDirection('left')
       setCurrentImage((prev) => (prev === totalImages ? 1 : prev + 1))
-    }, 5000)
+    }, 4000)
   }
 
   // 자동 슬라이드 정지 함수
@@ -147,10 +147,10 @@ export default function ShowoffSection() {
             className="space-y-12"
           >
             <div className="text-center lg:text-left">
-              <h2 className="text-reveal xl:text-[2.5rem] xl:font-bold bg-gradient-to-r via-[#ad49e1] from-[#ad49e1] to-[#ebd3f8] bg-[200%_auto] bg-clip-text text-4xl font-bold text-transparent">
+              <h2 className="text-reveal lg:text-[2.5rem] text-3xl xl:font-extrabold bg-gradient-to-r via-[#ad49e1] from-[#ad49e1] to-[#ebd3f8] bg-[200%_auto] bg-clip-text font-bold text-transparent">
                 코밋이 만들어온 성장
               </h2>
-              <p className="mt-4 text-gray-200 xl:text-lg px-8 lg:px-0">이 모든 숫자는 그동안 함께한 부원들이 보여준, 열정의 증거입니다.</p>
+              <p className="mt-4 text-gray-200 xl:text-lg px-8 lg:px-0">이 모든 숫자는 그동안 함께해왔던 부원들이 보여준, 열정의 증거입니다.</p>
             </div>
 
             <div className="grid grid-cols-2 gap-8">
@@ -163,7 +163,7 @@ export default function ShowoffSection() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="text-center lg:text-left"
                 >
-                  <div className="mb-2 text-5xl font-bold text-white">
+                  <div className="mb-2 text-3xl lg:text-4xl font-bold text-white">
                     <span className="number-counter" data-target={stat.number}>
                       0
                     </span>

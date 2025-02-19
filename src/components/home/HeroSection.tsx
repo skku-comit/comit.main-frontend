@@ -19,7 +19,7 @@ export default function HeroSection() {
         <div className="absolute inset-0 -mt-8 bg-[linear-gradient(to_right,rgba(255,255,255,0.07)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.07)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
         {/* 오른쪽 영역 강조 그리드 패턴 */}
         <div
-          className="absolute right-0 -mt-8 h-full w-[49.5%] bg-[linear-gradient(to_right,rgba(255,255,255,0.4)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.4)_1px,transparent_1px)] bg-[size:4rem_4rem]"
+          className="hidden md:block absolute right-0 -mt-8 h-full w-[49.5%] bg-[linear-gradient(to_right,rgba(255,255,255,0.4)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.4)_1px,transparent_1px)] bg-[size:4rem_4rem]"
           style={{
             maskImage: 'radial-gradient(circle at center, black 30%, transparent 90%)',
             WebkitMaskImage: 'radial-gradient(circle at center, black 30%, transparent 90%)'
@@ -41,60 +41,58 @@ export default function HeroSection() {
       {/* 하단 양쪽에서 피어오르는 그라데이션 - 오류 발생 */}
       {/* <div className="absolute -bottom-20 -left-20 w-[200px] h-[200px] bg-gradient-radial from-fuchsia-700/80 via-purple-800/30 to-transparent rounded-full blur-2xl z-0"></div>
         <div className="absolute -bottom-20 -right-20 w-[300px] h-[280px] bg-gradient-radial from-fuchsia-700/80 via-purple-800/30 to-transparent rounded-full blur-2xl z-20"></div> */}
-      <section className="flex h-full w-[100vw] bg-black">
-        {/* Background Animation */}
+      <section className="flex h-full w-[100vw] bg-black flex-col md:flex-row">
 
-        <div key="MainElement" className="relative mb-[2vh] flex items-center">
+        <div key="MainElement" className="relative md:mb-[2vh] flex items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="w-[55vw] sm:pl-[8%] xl:pl-[6%]"
+            className="md:w-[55vw] md:pl-[8%] xl:pl-[6%] mx-auto md:mx-0 md:mt-0 mt-[20vh]"
           >
             {/* 2024 활동 요약 링크 */}
-            <Link
-              href="/about/summary"
-              className="group mb-2 inline-flex items-center gap-2 rounded-full p-0 decoration-white underline-offset-4 transition-colors hover:underline"
-            >
-              <div className="rounded-full bg-white/10 p-1">
-                <SparklesIcon className="h-4 w-4 text-white" />
-              </div>
-              <span className="text-sm font-medium tracking-tight text-white">2024 활동 요약 살펴보기</span>
-            </Link>
-
+            <div className="flex justify-center md:justify-start">
+              <Link
+                href="/about/summary"
+                className="group mb-2 inline-flex items-center gap-2 rounded-full p-0 decoration-white underline-offset-4 transition-colors hover:underline"
+              >
+                <div className="rounded-full bg-white/10 p-1">
+                  <SparklesIcon className="h-4 w-4 text-white" />
+                </div>
+                <span className="text-sm font-medium tracking-tight text-white">2024 활동 요약 살펴보기</span>
+              </Link>
+            </div>
             {/* Main Heading */}
             <h1 className="font-bold tracking-tighter text-white leading-[1] text-[42px] lg:text-[50px] xl:text-[68px] 2xl:text-[80px]">
-              <div className="flex flex-col">
-                <span className="flex items-baseline gap-4">
+              <div className="flex flex-col items-center md:items-start">
+                <span className="flex items-baseline gap-2 md:gap-4">
                   <span>The</span>
                   <span>best community</span>
                 </span>
-                <span className="flex items-baseline gap-4">
+                <span className="flex items-baseline md:gap-4 gap-2">
                   <span>for</span>
                   <span className='whitespace-nowrap'>future-developers.</span>
                 </span>
               </div>
             </h1>
-
             {/* Sub Heading */}
-            <p className="text-bold md:mt-3 mt-4 max-w-3xl text-[20px]/[1.3] xl:text-[22px]/[1.3] tracking-tighter text-gray-300">
+            <p className="text-center md:text-start text-bold md:mt-3 mt-4 max-w-3xl text-[20px]/[1.3] xl:text-[22px]/[1.3] tracking-tighter text-gray-300">
               <span className="hidden lg:inline">코밋이기에 제공할 수 있는 </span>학내 최고의 학습 커뮤니티.
               <br />
               성균관대학교 중앙 코딩동아리 CoMit
             </p>
-
             {/* CTA Buttons */}
-            <div className="mt-4 xl:mt-6 flex flex-col gap-3 md:text-xs xl:text-sm sm:flex-row">
+            <div className="mt-2 xl:mt-4 flex flex-row gap-2 md:gap-3 md:text-xs xl:text-sm justify-center md:justify-start">
               <Link
                 href="/join"
-                className="inline-flex items-center rounded-2xl border border-transparent bg-white px-4 py-2 font-medium text-black transition-colors duration-150 hover:bg-purple-500"
+                className="text-sm w-fit h-10 inline-flex items-center text-center rounded-2xl border border-transparent bg-white px-3 py-1 md:px-4 md:py-2 font-medium text-black transition-colors duration-200 md:hover:-translate-y-[4px] group/follow active:translate-y-0 active:shadow-inner active:bg-slate-100"
               >
                 지원하기
-                <ArrowRightIcon className="-mr-1 ml-1 md:h-3 md:w-3 xl:h-4 xl:w-4" />
+                <ArrowRightIcon className="h-10 -mr-1 ml-1 size-3 md:group-hover/follow:-rotate-45 md:group-active/follow:rotate-0 duration-200 transition-transform" />
               </Link>
               <Link
                 href="/about"
-                className="inline-flex items-center rounded-2xl border-[1.5px] border-gray-300 px-3 py-1.5 font-medium text-gray-300 transition-colors duration-300 hover:text-white"
+                className="inline-flex w-fit items-center rounded-2xl border-[1.5px] border-gray-300 px-3 py-1 md:px-4 md:py-2 font-medium text-gray-300 transition-colors duration-150 hover:text-white"
               >
                 What&apos;s CoMit?
               </Link>

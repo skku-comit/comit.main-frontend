@@ -77,8 +77,8 @@ export default function FeaturesSection() {
           transition={{ duration: 0.8 }}
           className="mb-16 text-center flex flex-col items-center"
         >
-          <p className="mb-4 text-3xl font-bold text-white xl:text-5xl tracking-tight">부원들에게 제공하는 혜택</p>
-          <p className="w-4/5 text-xl text-gray-400">CoMit에서는 단순한 스터디 운영뿐만 아니라 장소 및 강좌 제공, 부원들을 위한 정기적인 모임과 네트워크 등 꾸준하고 열성적으로 학습하기에 안성맞춤인 환경 조성에 최선을 다하고 있습니다.</p>
+          <p className="mb-4 text-[32px] font-bold text-white xl:text-[40px] tracking-tight">쏟아지는 동아리 혜택들</p>
+          <p className="w-4/5 text-base lg:text-[20px] text-gray-400">CoMit에서는 단순한 스터디 운영뿐만 아니라 장소 및 강좌 제공, 부원들을 위한 정기적인 모임과 네트워크 등 꾸준하고 열성적으로 학습하기에 안성맞춤인 환경 조성에 최선을 다하고 있습니다.</p>
         </motion.div>
 
         <div className="space-y-24">

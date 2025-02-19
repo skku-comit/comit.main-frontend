@@ -22,10 +22,10 @@ export default function CTASection() {
           className="text-center"
         >
           {/* 메인 텍스트 */}
-          <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl md:text-5xl tracking-tight">
-          열정과 의지만 있다면, 언제든지 환영합니다.
+          <h2 className="mb-6 text-2xl font-bold text-white sm:text-4xl lg:text-5xl tracking-tight">
+          열정과 의지만 있다면, <br className='lg:hidden'/>누구던지 환영합니다.
           </h2>
-          <p className="mx-auto mb-12 max-w-4xl text-xl leading-relaxed tracking-tighter text-gray-300">
+          <p className="mx-auto mb-12 p-3 max-w-4xl text-base lg:text-xl leading-relaxed tracking-tighter text-gray-300">
             CoMit은 컴퓨터 분야에 생소하여 이제 막 코딩을 배우기 시작했거나, 이미 숙련되어 더 공부하고 싶은 개발자 모두에게 열려있습니다. 성균관대학교 최대 규모의 코딩 동아리에 가입하여 잊지 못할 경험을 시작하세요.
           </p>
 
