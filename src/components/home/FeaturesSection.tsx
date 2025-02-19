@@ -77,7 +77,7 @@ export default function FeaturesSection() {
           transition={{ duration: 0.8 }}
           className="mb-16 text-center flex flex-col items-center"
         >
-          <p className="mb-4 text-3xl font-bold text-white sm:text-4xl tracking-tight">부원이 아니라면 절대 누리지 못하는 혜택들</p>
+          <p className="mb-4 text-3xl font-bold text-white xl:text-5xl tracking-tight">부원들에게 제공하는 혜택</p>
           <p className="w-4/5 text-xl text-gray-400">CoMit에서는 단순한 스터디 운영뿐만 아니라 장소 및 강좌 제공, 부원들을 위한 정기적인 모임과 네트워크 등 꾸준하고 열성적으로 학습하기에 안성맞춤인 환경 조성에 최선을 다하고 있습니다.</p>
         </motion.div>
 
@@ -90,7 +90,7 @@ export default function FeaturesSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
             >
-              <h3 className="mb-8 text-2xl font-bold text-white">{category.category}</h3>
+              <h3 className="ml-5 mb-8 text-2xl xl:text-3xl font-bold text-white">{category.category}</h3>
               <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {category.items.map((feature, index) => (
                   <motion.div
@@ -106,7 +106,7 @@ export default function FeaturesSection() {
                         <div className="mr-4 rounded-lg bg-white/5 p-2 transition-colors group-hover:bg-white/10">
                           <feature.icon className="h-6 w-6 text-purple-400" />
                         </div>
-                        <h4 className="text-lg font-semibold text-white">{feature.title}</h4>
+                        <h4 className="text-lg xl:text-xl font-semibold text-white">{feature.title}</h4>
                       </div>
                       <p className="text-gray-400">{feature.description}</p>
                     </div>

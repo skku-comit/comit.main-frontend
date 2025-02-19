@@ -87,7 +87,7 @@ export default function HeroSection() {
             <div className="mt-4 xl:mt-6 flex flex-col gap-3 md:text-xs xl:text-sm sm:flex-row">
               <Link
                 href="/join"
-                className="inline-flex items-center rounded-2xl border border-transparent bg-white px-4 py-2 font-medium text-black transition-colors duration-300 hover:bg-purple-500/90"
+                className="inline-flex items-center rounded-2xl border border-transparent bg-white px-4 py-2 font-medium text-black transition-colors duration-150 hover:bg-purple-500"
               >
                 지원하기
                 <ArrowRightIcon className="-mr-1 ml-1 md:h-3 md:w-3 xl:h-4 xl:w-4" />
