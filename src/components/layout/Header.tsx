@@ -226,7 +226,7 @@ export default function Header() {
                           <div className="mr-2.5 flex h-10 w-10 items-center justify-center rounded-lg bg-gray-700/50 transition-colors group-hover:bg-white">
                             <ArrowTopRightOnSquareIcon className="h-5 w-5 stroke-2 text-gray-300 transition-colors group-hover:fill-white group-hover:stroke-black" />
                           </div>
-                          <div className="text-[15px] font-medium text-gray-200 group-hover:text-white">
+                          <div className="text-[15px] font-normal text-gray-200 group-hover:text-white">
                             COMS(코밋 스페이스)
                           </div>
                         </div>

@@ -19,7 +19,7 @@ export default function HeroSection() {
         <div className="absolute inset-0 -mt-8 bg-[linear-gradient(to_right,rgba(255,255,255,0.07)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.07)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
         {/* 오른쪽 영역 강조 그리드 패턴 */}
         <div
-          className="hidden md:block absolute right-0 -mt-8 h-full w-[49.5%] bg-[linear-gradient(to_right,rgba(255,255,255,0.4)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.4)_1px,transparent_1px)] bg-[size:4rem_4rem]"
+          className="hidden lg:block absolute lg:right-0 -mt-8 h-full w-[49.5%] bg-[linear-gradient(to_right,rgba(255,255,255,0.4)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.4)_1px,transparent_1px)] bg-[size:4rem_4rem]"
           style={{
             maskImage: 'radial-gradient(circle at center, black 30%, transparent 90%)',
             WebkitMaskImage: 'radial-gradient(circle at center, black 30%, transparent 90%)'
@@ -33,7 +33,7 @@ export default function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{
           duration: 0.6,
-          delay: 0.1 // MainElement 애니메이션(0.8s) 완료 후 시작
+          delay: 0.1
         }}
         className="md:flex hidden absolute bottom-0 left-0 right-0 z-10 h-[120px] bg-gradient-to-t from-fuchsia-700/80 via-purple-800/30 to-transparent"
       ></motion.div>
@@ -41,58 +41,53 @@ export default function HeroSection() {
       {/* 하단 양쪽에서 피어오르는 그라데이션 - 오류 발생 */}
       {/* <div className="absolute -bottom-20 -left-20 w-[200px] h-[200px] bg-gradient-radial from-fuchsia-700/80 via-purple-800/30 to-transparent rounded-full blur-2xl z-0"></div>
         <div className="absolute -bottom-20 -right-20 w-[300px] h-[280px] bg-gradient-radial from-fuchsia-700/80 via-purple-800/30 to-transparent rounded-full blur-2xl z-20"></div> */}
-      <section className="flex h-full w-[100vw] bg-black flex-col md:flex-row">
+      <section className="flex min-h-[calc(100vh-4rem)] md:h-full w-[100vw] bg-black flex-col md:flex-row">
 
-        <div key="MainElement" className="relative md:mb-[2vh] flex items-center">
+        <div key="MainElement" className="relative flex items-center px-4 sm:px-6 md:mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="md:w-[55vw] md:pl-[8%] xl:pl-[6%] mx-auto md:mx-0 md:mt-0 mt-[20vh]"
+            className="lg:w-[55vw] lg:pl-[8%] xl:pl-[6%] mx-auto md:mx-0 md:mt-0 mt-12 mb-12 md:mb-0"
           >
             {/* 2024 활동 요약 링크 */}
-            <div className="flex justify-center md:justify-start">
-              <Link
-                href="/about/summary"
-                className="group mb-2 inline-flex items-center gap-2 rounded-full p-0 decoration-white underline-offset-4 transition-colors hover:underline"
-              >
-                <div className="rounded-full bg-white/10 p-1">
-                  <SparklesIcon className="h-4 w-4 text-white" />
-                </div>
-                <span className="text-sm font-medium tracking-tight text-white">2024 활동 요약 살펴보기</span>
-              </Link>
+            <div className="flex justify-center lg:justify-start md:mb-0 mb-2">
+              <div className="rounded-full bg-white/10">
+                <Link
+                  href="/about/summary"
+                  className="hover:cursor-pointer px-2 pt-1.5 group inline-flex items-center gap-1 rounded-full decoration-white underline-offset-4 transition-colors"
+                >
+                  <div className="rounded-full bg-white/10 p-1">
+                    <SparklesIcon className="h-4 w-4 text-white" />
+                  </div>
+                  <span className="text-xs md:text-sm font-medium tracking-tight text-gray-200 pr-2">신규 <span className='text-gray-400 font-bold inline-block -translate-y-0.5'>|</span> 2024 활동 요약 살펴보기 </span>
+                </Link>
+              </div>
             </div>
             {/* Main Heading */}
-            <h1 className="font-bold tracking-tighter text-white leading-[1] text-[42px] lg:text-[50px] xl:text-[68px] 2xl:text-[80px]">
-              <div className="flex flex-col items-center md:items-start">
-                <span className="flex items-baseline gap-2 md:gap-4">
-                  <span>The</span>
-                  <span>best community</span>
-                </span>
-                <span className="flex items-baseline md:gap-4 gap-2">
-                  <span>for</span>
-                  <span className='whitespace-nowrap'>future-developers.</span>
-                </span>
-              </div>
+            <h1 className="hidden md:block font-bold md:whitespace-nowrap tracking-tighter text-center lg:text-start text-white leading-[1] text-[50px] xl:text-[68px] 2xl:text-[80px]">
+              The best community <br className= 'hidden md:inline' />for <span className='inline-block whitespace-nowrap bg-gradient-to-r from-purple-500 to-purple-800 text-transparent bg-clip-text'>future-developers.</span> 
             </h1>
+            <h1 className="block md:hidden font-bold md:whitespace-nowrap tracking-tighter text-center md:text-start text-white leading-[0.9] text-[42px] lg:text-[50px] xl:text-[68px] 2xl:text-[80px]">
+              Join the best <br/><span className='inline-block whitespace-nowrap bg-gradient-to-r from-purple-500 to-purple-800 text-transparent bg-clip-text'>future-developer</span> community</h1>
             {/* Sub Heading */}
-            <p className="text-center md:text-start text-bold md:mt-3 mt-4 max-w-3xl text-[20px]/[1.3] xl:text-[22px]/[1.3] tracking-tighter text-gray-300">
-              <span className="hidden lg:inline">코밋이기에 제공할 수 있는 </span>학내 최고의 학습 커뮤니티.
+            <p className="text-center lg:text-start text-bold mt-4 md:mt-3 mb-4 max-w-3xl text-base md:text-[20px]/[1.3] xl:text-[22px]/[1.3] tracking-tighter text-gray-300">
+              <span className='hidden md:inline'>코밋이기에 제공할 수 있는 </span>학내 최고의 학습 커뮤니티.  
               <br />
               성균관대학교 중앙 코딩동아리 CoMit
             </p>
             {/* CTA Buttons */}
-            <div className="mt-2 xl:mt-4 flex flex-row gap-2 md:gap-3 md:text-xs xl:text-sm justify-center md:justify-start">
+            <div className="mx-auto lg:mx-0 max-w-[28rem] mt-10 md:mt-4 xl:mt-4 flex flex-col md:flex-row gap-2 md:gap-3 text-base xl:text-sm justify-center lg:justify-start">
               <Link
                 href="/join"
-                className="text-sm w-fit h-10 inline-flex items-center text-center rounded-2xl border border-transparent bg-white px-3 py-1 md:px-4 md:py-2 font-medium text-black transition-colors duration-200 md:hover:-translate-y-[4px] group/follow active:translate-y-0 active:shadow-inner active:bg-slate-100"
+                className="mx-auto md:mx-0 w-full rounded-xl md:h-10 md:rounded-2xl md:w-fit flex items-center justify-center border-transparent bg-white px-3 py-2.5 md:px-4 md:py-2 text-black transition-colors duration-200 md:hover:-translate-y-[4px] group/follow active:translate-y-0 active:shadow-inner active:bg-slate-100"
               >
-                지원하기
-                <ArrowRightIcon className="h-10 -mr-1 ml-1 size-3 md:group-hover/follow:-rotate-45 md:group-active/follow:rotate-0 duration-200 transition-transform" />
+                <span className='md:font-medium'>지원하기</span>
+                <ArrowRightIcon className="hidden md:inline h-10 -mr-1 ml-1 size-3 md:group-hover/follow:-rotate-45 md:group-active/follow:rotate-0 duration-200 transition-transform" />
               </Link>
               <Link
                 href="/about"
-                className="inline-flex w-fit items-center rounded-2xl border-[1.5px] border-gray-300 px-3 py-1 md:px-4 md:py-2 font-medium text-gray-300 transition-colors duration-150 hover:text-white"
+                className="mx-auto md:mx-0 w-full rounded-xl md:h-10 md:rounded-2xl md:w-fit flex items-center justify-center border-[1.5px] border-gray-300 px-3 py-2.5 md:px-4 md:py-2 font-medium text-white md:text-gray-300 transition-colors duration-150 hover:text-white"
               >
                 What&apos;s CoMit?
               </Link>
@@ -100,13 +95,13 @@ export default function HeroSection() {
           </motion.div>
         </div>
 
-        <div className="flex h-full w-full items-center justify-center">
+        <div className="hidden lg:flex size-full items-center justify-center">
           {/* 오른쪽: 코드 에디터 UI - 큰 버전 */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="relative hidden lg:flex items-center lg:pb-[8%] lg:pr-[4%] 2xl:w-[450px] scale-[65%] lg:scale-[80%] xl:scale-100 overflow-hidden rounded-xl border border-gray-800 bg-gray-900/50 backdrop-blur-sm"
+            className="relative hidden lg:flex items-center lg:mb-[8%] lg:mr-[4%] w-[413px] min-w-[413px] overflow-hidden rounded-xl border border-gray-800 bg-gray-900/50 backdrop-blur-sm"
           >
             <div>
               {/* 에디터 헤더 */}
@@ -241,7 +236,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="relative lg:hidden flex items-center pb-10 w-[300px] h-[340px] overflow-hidden rounded-xl border border-gray-800 bg-gray-900/50 backdrop-blur-sm"
+            className="relative hidden items-center p-2 mt-10  pb-10 w-[300px] h-[340px] overflow-hidden rounded-xl border border-gray-800 bg-gray-900/50 backdrop-blur-sm"
           >
             <div className="w-full">
               {/* 에디터 헤더 */}
@@ -271,7 +266,6 @@ export default function HeroSection() {
                 </div>
                 <span className="ml-3 text-xs text-gray-400">welcome.ts</span>
               </div>
-
               {/* 코드 내용 */}
               <div className="px-2 py-3 font-mono text-[10px]">
                 <div className="group">
