@@ -62,11 +62,6 @@ export default function StudyPage() {
                 className="group relative overflow-hidden rounded-xl bg-white/5 p-6 hover:bg-white/10"
               >
                 <div className="flex items-center gap-4">
-                  <img
-                    src={record.leader.image}
-                    alt={record.leader.name}
-                    className="h-10 w-10 rounded-full"
-                  />
                   <div>
                     <h3 className="font-medium text-white">{record.title}</h3>
                     <p className="text-sm text-gray-400">{record.leader.name}</p>
