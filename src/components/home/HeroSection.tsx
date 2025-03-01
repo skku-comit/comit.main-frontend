@@ -8,6 +8,12 @@ import TechMarquee from '@/components/ui/TechMarquee'
 export default function HeroSection() {
   return (
     <div className="relative h-[calc(100vh-4rem)]">
+
+      {/* <div key='bg-outer-container' className='fixed inset-9 z-0 m-auto'>
+        <div key='bg-inner-container' className='rounded-full inset-0 m-auto w-full h-full w-min-[1000px] overflow-hidden bg-white scale-75'>
+          <div key='bg-gradient' className='absolute inset-0 w-dvw h-dvh m-auto bg:conic-gradient(from 0deg,#08f,#f60,#bbffa1,#4c00ff,#ab2666,#09f) to-transparent'></div>
+        </div>
+      </div> */}
       {/* 디지털 그리드 패턴 */}
       <motion.div
         initial={{ opacity: 0, x: 20 }}
@@ -35,7 +41,7 @@ export default function HeroSection() {
           duration: 0.6,
           delay: 0.1
         }}
-        className="md:flex hidden absolute bottom-0 left-0 right-0 z-10 h-[120px] bg-gradient-to-t from-fuchsia-700/80 via-purple-800/30 to-transparent"
+        className="lg:flex hidden absolute bottom-0 left-0 right-0 z-10 h-[120px] bg-gradient-to-t from-fuchsia-700/80 via-purple-800/30 to-transparent"
       ></motion.div>
 
       {/* 하단 양쪽에서 피어오르는 그라데이션 - 오류 발생 */}
@@ -71,7 +77,7 @@ export default function HeroSection() {
             <h1 className="block md:hidden font-bold md:whitespace-nowrap tracking-tighter text-center md:text-start text-white leading-[0.9] text-[42px] lg:text-[50px] xl:text-[68px] 2xl:text-[80px]">
               Join the best <br/><span className='inline-block whitespace-nowrap bg-gradient-to-r from-purple-500 to-purple-800 text-transparent bg-clip-text'>future-developer</span> community</h1>
             {/* Sub Heading */}
-            <p className="text-center lg:text-start text-bold mt-4 md:mt-3 mb-4 max-w-3xl text-base md:text-[20px]/[1.3] xl:text-[22px]/[1.3] tracking-tighter text-gray-300">
+            <p className="text-center lg:text-start text-bold mt-4 md:mt-3 mb-4 max-w-3xl text-base/[1.6] md:text-[20px]/[1.3] xl:text-[22px]/[1.3] tracking-tighter text-gray-300">
               <span className='hidden md:inline'>코밋이기에 제공할 수 있는 </span>학내 최고의 학습 커뮤니티.  
               <br />
               성균관대학교 중앙 코딩동아리 CoMit

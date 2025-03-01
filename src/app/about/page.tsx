@@ -1,15 +1,21 @@
-import IntroSection from '@/components/about/IntroSection'
-import OrganizationSection from '@/components/about/OrganizationSection'
-import CISection from '@/components/about/CISection'
-import ContactSection from '@/components/about/ContactSection'
+'use client'
+
+// import IntroSection from '@/components/about/IntroSection'
+// import OrganizationSection from '@/components/about/OrganizationSection'
+// import CISection from '@/components/about/CISection'
+// import ContactSection from '@/components/about/ContactSection'
+import LocationSection from '@/components/about/LocationSection'
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen">
-      <IntroSection />
+    <div className="min-h-screen bg-black">
+      {/* <IntroSection />
       <OrganizationSection />
-      <CISection />
-      <ContactSection />
+      <CISection /> */}
+      {/* <ContactSection /> */}
+      
+      {/* 찾아오시는 길 섹션 */}
+      <LocationSection />
     </div>
   )
 }

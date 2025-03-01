@@ -4,11 +4,12 @@ import FeaturesSection from '@/components/home/FeaturesSection'
 import ShowoffSection from '@/components/home/ShowoffSection'
 import ReviewsSection from '@/components/home/ReviewsSection'
 import CTASection from '@/components/home/CTASection'
-
+// import InformSection from '@/components/home/InformSection'
 export default function HomePage() {
   return (
     <div className="min-h-screen">
       <HeroSection />
+      {/* <InformSection/> */}
       <SellingPointsSection />
       <FeaturesSection />
       <ShowoffSection />

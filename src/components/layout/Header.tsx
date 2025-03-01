@@ -44,7 +44,7 @@ export default function Header() {
 
   const navigation: NavSection[] = [
     {
-      name: 'Our Story',
+      name: '찾아오시는 길', //임시방편
       href: '/about',
       items: [
         { name: '소개', href: '/about', subheading: '동아리 소개와 가치', icon: InformationCircleIcon },
@@ -74,7 +74,7 @@ export default function Header() {
       ]
     },
     {
-      name: '자료실',
+      name: '자료실', //임시방편
       href: '/resources',
       items: [
         { name: '회칙', href: '/resources/rules', subheading: '동아리 운영 규정', icon: BookmarkIcon },
@@ -86,7 +86,7 @@ export default function Header() {
       name: '가입안내',
       href: '/join',
       items: [
-        { name: '지원하기', href: '/join/apply', subheading: '2025-1 신입부원 모집', icon: AcademicCapIcon },
+        { name: '리쿠르팅', href: '/join/apply', subheading: '2025-1 신입부원 모집', icon: AcademicCapIcon },
         { name: '이전 모집 공고', href: '/join/history', subheading: '지난 모집내역', icon: NewspaperIcon }
       ]
     }
@@ -134,7 +134,7 @@ export default function Header() {
 
                   {/* 네비게이션 드롭다운 */}
                   <AnimatePresence>
-                    {activeDropdown === section.name && (
+                    {false &&activeDropdown === section.name && (
                       <div className="absolute left-1/2 -translate-x-1/2">
                         {' '}
                         {/* motion.div와 transform 속성 충돌 해결을 위한 wrapper div */}
