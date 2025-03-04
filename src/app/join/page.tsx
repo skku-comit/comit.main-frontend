@@ -12,41 +12,38 @@ export default function JoinPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-black via-[#2e073f] to-[#2e073f]">
       {/* 헤더 섹션 */}
-      <div className="relative overflow-hidden pt-[5vw] pb-[4vw]">
-        <div className="mx-auto lg:max-w-[90%] px-[4vw]">
+        <div className="mx-auto px-8 relative overflow-hidden py-12 md:py-20 lg:py-28">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-[5vw] md:text-[3vw] font-bold tracking-normal text-white leading-[1.3]">
+            <h1 className="text-2xl md:text-[32px] lg:text-[40px] font-semibold tracking-normal text-white leading-[1.2]">
               CoMit과 함께<br />성장할 준비가 되셨나요?
             </h1>
-            <p className="mx-auto mt-4 text-[2.5vw] md:text-[1.5vw] tracking-tight leading-[1.6] text-gray-300">
+            <p className="text-base md:text-[20px] lg:text-[24px] mx-auto mt-4 md:mt-3 tracking-tight leading-[1.2] break-keep text-gray-200">
               2025년, 더 넓은 세상을 향해 도약하는 CoMit의 새로운 여정에 함께해주세요.
             </p>
           </motion.div>
         </div>
-      </div>
 
       {/* 메인 콘텐츠 */}
-      <div className="mx-auto max-w-[90%] px-[4vw] py-[3vw]">
-        <div className="grid gap-[3vw] md:grid-cols-2">
+        <div className="grid gap-8 lg:gap-[3vw+60px] md:grid-cols-2 px-2 md:px-8 mx-auto w-[min(95vw,1180px)]">
           {/* 포스터 섹션 */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative group"
+            className="relative w-[83vw] md:w-[min(42vw,500px)] mx-auto"
           >
-            <div className="overflow-hidden rounded-2xl shadow-xl transition-transform duration-300 group-hover:scale-[1.02]">
+            <div className="size-full overflow-hidden rounded-2xl shadow-xl transition-transform duration-300 hover:scale-[1.01]">
               <Image
                 src="/poster_demo.png"
                 alt="CoMit 모집 포스터"
-                width={800}
-                height={1000}
-                className="w-full object-cover"
+                width={500}
+                height={700}
+                className="w-full h-full"
               />
             </div>
           </motion.div>
@@ -54,21 +51,20 @@ export default function JoinPage() {
           {/* 모집 일정 섹션 */}
           <ApplicationSection />
         </div>
-      </div>
 
       {/* 지원하기 버튼 섹션 */}
-      <div className="py-6">
+      <div className="py-6 md:mt-12 mt-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-24"
+          className="text-center md:mb-16 mb-16"
         >
           <Link 
             href={googleDocsLink}
-            className="inline-flex items-center justify-center px-16 py-4 text-[22px] font-semibold text-white 
-              bg-gradient-to-r from-[#7a1cac] to-[#ad49e1] rounded-full 
+            className="inline-flex items-center justify-center px-12 py-3 md:px-16 md:py-4 text-base md:text-[20px] font-semibold text-white 
+              bg-gradient-to-r from-[#7a1cac] to-[#ad49e1] rounded-2xl 
               shadow-lg shadow-purple-500/30 
               transition-all duration-300 
               hover:shadow-purple-500/50 hover:scale-[1.02]

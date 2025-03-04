@@ -9,28 +9,29 @@ const recruitmentSchedule = [
     title: '기존 부원 재등록 기간',
     description: '현재 CoMit 부원들의 재등록이 진행됩니다.',
     startDate: new Date('2025-02-10T00:00:00'),
-    endDate: new Date('2025-03-10T00:00:00')
-  },
+    endDate: new Date('2025-02-17T00:00:00')
+  },  
   {
-    period: '3월 10일 ~ 3월 11일',
-    title: '동아리 홍보부스 기간',
-    description: '학생회관에서 CoMit을 직접 만나보세요!',
-    startDate: new Date('2025-03-10T00:00:00'),
-    endDate: new Date('2025-03-12T00:00:00')
-  },
-  {
-    period: '3월 12일 ~ 3월 16일',
+    period: '3월 4일 ~ 3월 16일',
     title: '정규모집 기간',
     description: '2024년 1학기 정규 모집이 진행됩니다.',
-    startDate: new Date('2025-03-12T00:00:00'),
+    startDate: new Date('2025-03-04T00:00:00'),
     endDate: new Date('2025-03-17T00:00:00')
   },
+  {
+    period: '3월 11일 ~ 3월 12일',
+    title: '동아리 홍보부스 기간',
+    description: '학생회관에서 CoMit을 직접 만나보세요!',
+    startDate: new Date('2025-03-11T00:00:00'),
+    endDate: new Date('2025-03-13T00:00:00')
+  },
+
   {
     period: '3월 17일 ~',
     title: '동아리 상시모집 기간',
     description: '수시로 지원 가능한 상시 모집이 진행됩니다.',
     startDate: new Date('2025-03-17T00:00:00'),
-    endDate: new Date('2025-12-31T23:59:59')
+    endDate: new Date('2025-08-10T23:59:59')
   }
 ]
 
@@ -40,9 +41,11 @@ export default function ApplicationSection() {
   useEffect(() => {
     const getCurrentPeriod = () => {
       const now = new Date()
-      return recruitmentSchedule.findIndex(
+      const index = recruitmentSchedule.findIndex(
         schedule => now >= schedule.startDate && now < schedule.endDate
       )
+      console.log(index)
+      return index
     }
     setCurrentPeriodIndex(getCurrentPeriod())
   }, [])
@@ -52,40 +55,43 @@ export default function ApplicationSection() {
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8, delay: 0.2 }}
-      className="mt-[1vw] space-y-[2vw]"
+      className="h-full flex flex-col"
     >
-      <h2 className="text-[2.5vw] md:text-[2vw] font-bold text-white md:text-start text-center">
+      <h2 className="text-[26px] md:my-0 mt-12 mb-4 md:text-[24px] lg:text-[30px] font-bold text-white md:text-start text-center">
         <span className="text-[#ad49e1]">25학년 1학기 </span>모집 일정
       </h2>
-      <div className="space-y-[1.5vw]">
+      <div className="flex-1 flex flex-col gap-3 md:gap-0 md:justify-around mt-2 md:mx-0">
         {recruitmentSchedule.map((schedule, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 + index * 0.1 }}
-            className="relative pl-[2vw] before:absolute before:left-0 before:top-0 before:h-full before:w-[2px] before:bg-[#ad49e1]/30"
+            className="relative lg:pl-6 lg:before:absolute lg:before:left-0 lg:before:top-1 lg:before:bottom-1 lg:before:h-auto lg:before:w-[2px] lg:before:bg-[#ad49e1]/30"
           >
-            <div 
-              className={`absolute -left-[5px] h-[0.8vw] w-[0.8vw] rounded-full ${
+            <div key='calendar-dot'
+              className={`hidden lg:block absolute -left-[4px] md:size-2.5 size-2 rounded-full ${
                 currentPeriodIndex === index 
-                  ? 'bg-[#ad49e1] ring-4 ring-[#ad49e1]/30' 
-                  : 'bg-[#ad49e1]/50'
+                  ? 'bg-[#ad49e1] ring-4 ring-[#ad49e1]/45 animate-pulse' 
+                  : 'bg-[#ad49e1]/70'
               }`}
-              style={{ top: `${index * 1.5 + 1.5}vw` }}
+              style={{ 
+                top: `${15 + (index * 30)}px` 
+              }}
+              
             />
-            <div className={`group cursor-pointer rounded-lg p-[1.5vw] transition-colors ${
+            <div key='calendar-card' className={`group cursor-pointer rounded-lg p-3 lg:p-[22px] transition-colors ${
               currentPeriodIndex === index 
                 ? 'bg-[#ad49e1]/20 hover:bg-[#ad49e1]/22' 
                 : 'bg-black/30 hover:bg-white/10'
             }`}>
-              <div className="text-[1vw] md:text-[clamp(1.3vw, 22px)]  font-medium text-[#ebd3f8]">
+              <div className="text-base md:text-[12px] lg:text-[16px] font-medium text-[#ebd3f8]">
                 {schedule.period}
               </div>
-              <div className="mt-[0.5vw] text-[1.8vw] md:text-[22px] font-semibold text-white">
+              <div className="text-base md:text-[17px] lg:text-[22px] md:mt-1 font-semibold text-white">
                 {schedule.title}
               </div>
-              <div className="mt-[0.3vw] text-[1.2vw] md:text-[14px] text-gray-300">
+              <div className="text-sm mt-0.5 md:text-[12px] lg:text-[16px] text-gray-300 break-keep">
                 {schedule.description}
               </div>
             </div>

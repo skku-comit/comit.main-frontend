@@ -23,16 +23,16 @@ const faqs = [
 
 export default function FAQSection() {
   return (
-    <div className="bg-black/50 py-24">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="bg-black/50 py-16 md:py-24">
+      <div className="mx-auto max-w-7xl px-2 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="mx-auto max-w-4xl"
         >
-          <h2 className="text-2xl text-center font-bold leading-10 tracking-tight text-white mb-12">자주 묻는 질문</h2>
-          <div className="space-y-4">
+          <h2 className="text-2xl md:text-3xl text-center font-bold leading-10 tracking-tight text-white mb-6 md:mb-12">FAQ</h2>
+          <div className="space-y-2 md:space-y-4">
             {faqs.map((faq, index) => (
               <motion.div
                 key={index}
@@ -41,8 +41,8 @@ export default function FAQSection() {
                 transition={{ delay: index * 0.1 }}
                 className="bg-black/30 rounded-lg p-6 hover:bg-black/40 transition-colors"
               >
-                <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
-                <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                <h3 className="text-base md:text-lg font-semibold text-white mb-3">{faq.question}</h3>
+                <p className="text-sm md:text-base text-gray-300 leading-relaxed break-keep">{faq.answer}</p>
               </motion.div>
             ))}
           </div>
