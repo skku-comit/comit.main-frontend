@@ -16,14 +16,14 @@ const reviews = [
       '코밋은 개발의 시발점입니다. 이론 지식들을 실제 적용할 수 있는 놀이터로, 관심사가 같은 친구들을 만나 좋은 추억들을 쌓을 수 있었습니다.',
     author: '22학번 손장수',
     role: '현) 피아노 마스터',
-    image: '/images/reviews/avatar2.jpg'
+    image: '/jangsu.png'
   },
   {
     content:
       '여러 훌륭한 친구들을 만나 많이 배웠습니다. 특히 코밋 웹사이트 개발 과정에 참여하며 협업 방식에 대해 배울 수 있어 좋았어요.',
     author: '19학번 김재순',
     role: '현) 든든한 동아리 멘토',
-    image: '/images/reviews/avatar3.jpg'
+    image: '/jaesun.png'
   }
 ]
 

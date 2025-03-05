@@ -57,7 +57,7 @@ export default function ApplicationSection() {
       transition={{ duration: 0.8, delay: 0.2 }}
       className="h-full flex flex-col"
     >
-      <h2 className="text-[26px] md:my-0 mt-12 mb-4 md:text-[24px] lg:text-[30px] font-bold text-white md:text-start text-center">
+      <h2 className="text-[24px] pl-4 md:pl-0 md:my-0 mt-12 mb-4 md:text-[24px] lg:text-[30px] font-extrabold tracking-tight md:tracking-normal md:font-bold text-white text-start">
         <span className="text-[#ad49e1]">25학년 1학기 </span>모집 일정
       </h2>
       <div className="flex-1 flex flex-col gap-3 md:gap-0 md:justify-around mt-2 md:mx-0">
@@ -67,7 +67,7 @@ export default function ApplicationSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 + index * 0.1 }}
-            className="relative lg:pl-6 lg:before:absolute lg:before:left-0 lg:before:top-1 lg:before:bottom-1 lg:before:h-auto lg:before:w-[2px] lg:before:bg-[#ad49e1]/30"
+            className="relative w-full md:w-auto lg:pl-6 lg:before:absolute lg:before:left-0 lg:before:top-1 lg:before:bottom-1 lg:before:h-auto lg:before:w-[2px] lg:before:bg-[#ad49e1]/30"
           >
             <div key='calendar-dot'
               className={`hidden lg:block absolute -left-[4px] md:size-2.5 size-2 rounded-full ${
@@ -76,11 +76,11 @@ export default function ApplicationSection() {
                   : 'bg-[#ad49e1]/70'
               }`}
               style={{ 
-                top: `${15 + (index * 30)}px` 
+                top: `${10 + (index * 30)}px` 
               }}
               
             />
-            <div key='calendar-card' className={`group cursor-pointer rounded-lg p-3 lg:p-[22px] transition-colors ${
+            <div key='calendar-card' className={`group cursor-pointer rounded-lg px-5 py-4 lg:p-[22px] transition-colors ${
               currentPeriodIndex === index 
                 ? 'bg-[#ad49e1]/20 hover:bg-[#ad49e1]/22' 
                 : 'bg-black/30 hover:bg-white/10'
