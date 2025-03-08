@@ -1,3 +1,6 @@
+/* Pretendard OTF 폰트 import */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,7 +8,6 @@
 @layer base {
   html {
     font-family:
-      'Pretendard Variable',
       Pretendard,
       -apple-system,
       BlinkMacSystemFont,

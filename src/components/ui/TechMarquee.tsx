@@ -1,10 +1,10 @@
 'use client'
+// import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { TechStack } from '@/app/types'
-import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
-
+// 
 const tech_stack: TechStack[] = [
   { name: 'Next.js', icon: '/icons/tech/nextjs.svg' },
   { name: 'React', icon: '/icons/tech/react.svg' },
@@ -34,7 +34,7 @@ export default function TechMarquee() {
           WebkitMask: `linear-gradient(90deg, transparent, black 15%, black 85%, transparent)`
         }}
       >
-        {/* Hover시 나타나는 문구 */}
+        {/* Hover시 나타나는 문구
         <div className="absolute inset-0 z-20 flex w-auto items-center justify-center bg-black/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
           <div className="group/link flex items-center gap-2">
             <p className="text-lg font-medium text-gray-200 decoration-2 group-hover/link:underline">
@@ -42,10 +42,10 @@ export default function TechMarquee() {
             </p>
             <ArrowTopRightOnSquareIcon className="h-4 w-4 text-white" />
           </div>
-        </div>
+        </div> */}
 
         {/* Marquee 컨텐츠 */}
-        <div className="absolute z-10 flex h-full items-center transition-opacity duration-300 group-hover:opacity-30">
+        <div className="absolute z-10 flex h-full items-center transition-opacity duration-300">
           <motion.div
             className="flex items-center gap-28 whitespace-nowrap"
             animate={{

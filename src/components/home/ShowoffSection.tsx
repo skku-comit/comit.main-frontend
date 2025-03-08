@@ -132,7 +132,7 @@ export default function ShowoffSection() {
   ]
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden bg-black py-24">
+    <section ref={sectionRef} className="relative overflow-hidden py-24">
       {/* 배경 그리드 패턴 */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
 
@@ -144,13 +144,12 @@ export default function ShowoffSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="space-y-12"
+            className="space-y-16"
           >
             <div className="text-center lg:text-left">
-              <h2 className="text-reveal lg:text-[2.5rem] text-3xl xl:font-extrabold bg-gradient-to-r via-[#ad49e1] from-[#ad49e1] to-[#ebd3f8] bg-[200%_auto] bg-clip-text font-bold text-transparent">
+              <h2 className="text-reveal lg:text-6xl text-3xl xl:font-extrabold leading-[1.3] bg-gradient-to-r via-[#ad49e1] from-[#ad49e1] to-[#ebd3f8] bg-[200%_auto] bg-clip-text font-bold text-transparent">
                 코밋이 만들어온 성장
               </h2>
-              <p className="mt-4 text-gray-200 xl:text-lg px-8 lg:px-0">이 모든 숫자는 그동안 함께해왔던 부원들이 보여준, 열정의 증거입니다.</p>
             </div>
 
             <div className="grid grid-cols-2 gap-8">

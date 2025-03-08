@@ -8,7 +8,7 @@ const reviews = [
   {
     content: '복학 후 처음 가입한 동아리이자, 개발로 처음 발을 들여놓게 해 준 동아리입니다. 낯선 복학 생활 속에서, 함께 성장할 수 있는 동료들을 만났어요. ',
     author: '20학번 권서진',
-    role: '현) 3대 330',
+    role: '현) 3대 355',
     image: '/seojin.jpg'
   },
   {
@@ -23,7 +23,7 @@ const reviews = [
       '여러 훌륭한 친구들을 만나 많이 배웠습니다. 특히 코밋 웹사이트 개발 과정에 참여하며 협업 방식에 대해 배울 수 있어 좋았어요.',
     author: '19학번 김재순',
     role: '현) 든든한 동아리 멘토',
-    image: '/jaesun.png'
+    image: '/jaesun.jpg'
   }
 ]
 
@@ -37,12 +37,9 @@ export default function ReviewsSection() {
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '30%'])
 
   return (
-    <section className="relative overflow-hidden bg-black py-24">
+    <section className="relative overflow-hidden py-24">
       {/* 배경 효과 */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 via-transparent to-transparent" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
-      </div>
+
 
       <div ref={containerRef} className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -50,13 +47,13 @@ export default function ReviewsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mb-16 text-center"
+          className="mb-4 text-center"
         >
           <h2 className="mb-4 text-3xl xl:text-[40px] font-bold text-white">CoMit, 어땠나요?</h2>
           <p className="text-lg xl:text-[20px] text-gray-400">코밋과 함께 성장한 선배들의 이야기</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="grid grid-cols-1 md:gap-2 lg:gap-6 md:grid-cols-3 md:mb-12">
           {reviews.map((review, index) => (
             <motion.div
               key={index}

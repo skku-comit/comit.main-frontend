@@ -6,8 +6,8 @@ import { MapPinIcon, BuildingOffice2Icon, ArrowTopRightOnSquareIcon } from '@her
 
 export default function LocationSection() {
   return (
-    <section className="relative bg-black py-24">
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+    <section className="relative bg-white/5 py-24">
+      <div className="absolute inset-0" />
       
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -30,7 +30,7 @@ export default function LocationSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-8"
           >
-            <div className="rounded-xl bg-white/5 p-6">
+            <div className="rounded-xl bg-white/15 p-6">
               <div className="flex items-start gap-4">
                 <BuildingOffice2Icon className="h-6 w-6 text-[#ad49e1] flex-shrink-0" />
                 <div>

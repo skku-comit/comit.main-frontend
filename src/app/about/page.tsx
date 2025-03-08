@@ -8,7 +8,7 @@ import LocationSection from '@/components/about/LocationSection'
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black/95">
       {/* <IntroSection />
       <OrganizationSection />
       <CISection /> */}

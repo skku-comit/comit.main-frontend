@@ -12,12 +12,12 @@ export default function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Contact</h3>
             <div className="space-y-2 text-sm text-gray-100">
               <p>
-                <span className="font-medium">회장 박해리</span>
-                <span className="ml-2">010-2323-3434</span>
+                <span className="font-medium">회장 최해리</span>
+                <span className="ml-2">010-7448-4041</span>
               </p>
               <p className="">
-                <span className="font-medium">홍보팀 정유현</span>
-                <span className="ml-2">010-0353-3554</span>
+                <span className="font-medium">기획팀장 임정준</span>
+                <span className="ml-2">010-4740-3604</span>
               </p>
               <p>
                 <a href="mailto:comit10282@gmail.com" className="text-purple-500 hover:text-purple-300">

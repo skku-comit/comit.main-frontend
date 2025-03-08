@@ -57,27 +57,29 @@ export default function HeroSection() {
             className="lg:w-[55vw] lg:pl-[8%] xl:pl-[6%] mx-auto md:mx-0 md:mt-0 mt-12 mb-12 md:mb-0"
           >
             {/* 2024 활동 요약 링크 */}
-            <div className="flex justify-center lg:justify-start md:mb-0 mb-2">
+            <div className="flex justify-center lg:justify-start mb-2">
               <div className="rounded-full bg-white/10">
                 <Link
-                  href="/about/summary"
+                  href="/"
                   className="hover:cursor-pointer px-2 pt-1.5 group inline-flex items-center gap-1 rounded-full decoration-white underline-offset-4 transition-colors"
                 >
                   <div className="rounded-full bg-white/10 p-1">
                     <SparklesIcon className="h-4 w-4 text-white" />
                   </div>
-                  <span className="text-xs md:text-sm font-medium tracking-tight text-gray-200 pr-2">신규 <span className='text-gray-400 font-bold inline-block -translate-y-0.5'>|</span> 2024 활동 요약 살펴보기 </span>
+                  <span className="text-xs md:text-base font-medium tracking-tight text-gray-200 pr-2">신규 <span className='text-gray-400 font-medium inline-block -translate-y-0.5'>|</span> 2024 활동 요약 살펴보기 </span>
                 </Link>
               </div>
             </div>
             {/* Main Heading */}
-            <h1 className="hidden md:block font-bold md:whitespace-nowrap tracking-tighter text-center lg:text-start text-white leading-[1] text-[50px] xl:text-[68px] 2xl:text-[80px]">
-              The best community <br className= 'hidden md:inline' />for <span className='inline-block whitespace-nowrap bg-gradient-to-r from-purple-500 to-purple-800 text-transparent bg-clip-text'>future-developers.</span> 
-            </h1>
+            <div className="hidden md:block font-bold md:whitespace-nowrap tracking-tighter text-center lg:text-start text-white text-[50px] xl:text-[68px] 2xl:text-[80px]">
+              <div className='leading-[1]'>The best community</div>
+              <div className='leading-[1.3] relative -top-4'>for <span className='inline-block whitespace-nowrap bg-gradient-to-r from-purple-500 to-purple-800 text-transparent bg-clip-text'>future-developers.</span> </div>
+            </div>
             <h1 className="block md:hidden font-bold md:whitespace-nowrap tracking-tighter text-center md:text-start text-white leading-[0.9] text-[42px] lg:text-[50px] xl:text-[68px] 2xl:text-[80px]">
               Join the best <br/><span className='inline-block whitespace-nowrap bg-gradient-to-r from-purple-500 to-purple-800 text-transparent bg-clip-text'>future-developer</span> community</h1>
             {/* Sub Heading */}
-            <p className="text-center lg:text-start text-bold mt-4 md:mt-3 mb-4 max-w-3xl text-base/[1.6] md:text-[20px]/[1.3] xl:text-[22px]/[1.3] tracking-tighter text-gray-300">
+            <div className='relative -top-4'>
+            <p className="text-center lg:text-start text-bold mt-4 md:mt-0 mb-4 max-w-3xl text-base/[1.6] md:text-[20px]/[1.3] xl:text-[22px]/[1.3] tracking-tighter text-gray-300">
               <span className='hidden md:inline'>코밋이기에 제공할 수 있는 </span>학내 최고의 학습 커뮤니티.  
               <br />
               성균관대학교 중앙 코딩동아리 CoMit
@@ -97,6 +99,7 @@ export default function HeroSection() {
               >
                 What&apos;s CoMit?
               </Link>
+            </div>
             </div>
           </motion.div>
         </div>

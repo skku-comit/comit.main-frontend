@@ -65,9 +65,7 @@ const features = [
 
 export default function FeaturesSection() {
   return (
-    <section className="relative overflow-hidden bg-black py-24">
-      {/* 배경 그리드 패턴 */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+    <section className="relative overflow-hidden py-24">
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -81,7 +79,7 @@ export default function FeaturesSection() {
           <p className="w-4/5 text-base lg:text-[20px] text-gray-400">CoMit에서는 단순한 스터디 운영뿐만 아니라 장소 및 강좌 제공, 부원들을 위한 정기적인 모임과 네트워크 등 꾸준하고 열성적으로 학습하기에 안성맞춤인 환경 조성에 최선을 다하고 있습니다.</p>
         </motion.div>
 
-        <div className="space-y-16">
+        <div className="space-y-16 lg:space-y-20">
           {features.map((category, categoryIndex) => (
             <motion.div
               key={category.category}
@@ -90,8 +88,8 @@ export default function FeaturesSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
             >
-              <h3 className="ml-5 mb-6 text-xl xl:text-2xl font-bold text-white">{category.category}</h3>
-              <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+              <h3 className="ml-5 mb-6 text-2xl xl:text-3xl font-semibold text-white">{category.category}</h3>
+              <div className="grid grid-cols-1 gap-4 md:gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {category.items.map((feature, index) => (
                   <motion.div
                     key={feature.title}

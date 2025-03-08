@@ -6,11 +6,12 @@ import { ArrowRightIcon } from '@heroicons/react/24/outline'
 
 export default function CTASection() {
   return (
-    <section className="relative overflow-hidden bg-black py-24">
+    <section className="relative overflow-hidden py-24">
       {/* 배경 효과 */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-transparent" />
+        {/* <div className="absolute inset-0 bg-gradient-to-br to-purple-600/10 via-black/20 from-black/90" /> */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -33,14 +34,14 @@ export default function CTASection() {
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <Link
               href="/join"
-              className="inline-flex items-center rounded-lg bg-purple-600 px-8 py-4 text-lg font-semibold text-white transition-colors duration-300 hover:bg-purple-700"
+              className="inline-flex items-center rounded-2xl bg-purple-600 px-6 py-4 text-lg font-semibold text-white transition-colors duration-300 hover:bg-purple-700"
             >
               지원하기
               <ArrowRightIcon className="-mr-1 ml-2 h-5 w-5" />
             </Link>
             <Link
               href="/about"
-              className="inline-flex items-center rounded-lg border border-gray-600 px-8 py-4 text-lg font-semibold text-gray-300 transition-colors duration-300 hover:bg-white/5"
+              className="inline-flex items-center rounded-2xl border border-gray-600 px-6 py-4 text-lg font-semibold text-gray-300 transition-colors duration-300 hover:bg-white/5"
             >
               더 알아보기
               <ArrowRightIcon className="-mr-1 ml-2 h-5 w-5" />

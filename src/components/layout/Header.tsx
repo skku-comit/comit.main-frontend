@@ -123,7 +123,7 @@ export default function Header() {
                 <div key={section.name} className="relative" onMouseEnter={() => setActiveDropdown(section.name)}>
                   <Link
                     href={section.href}
-                    className={`inline-flex items-center border-b-2 px-1 py-2 text-sm font-medium transition-colors ${
+                    className={`inline-flex items-center border-b-2 px-1 py-2 text-sm lg:text-base font-medium transition-colors ${
                       pathname === section.href
                         ? 'border-blue-400 text-blue-400'
                         : 'border-transparent text-gray-300 hover:border-gray-300 hover:text-white'

@@ -22,7 +22,7 @@ const features = [
   },
   {
     title: '학습환경 지원',
-    description: '스터디와 세션, 세미나 등 다양한 학습 환경을 제공하고 부원들에 한해 학습에 필요한 강좌 및 물품을 아낌없이 지원합니다. 동아리방을 포함한 시설 예약, 타 학회와의 교류 활동 등 특별한 학습 환경을 누리세요.',
+    description: '스터디와 세션, 세미나 등 다양한 학습 환경을 제공하고 부원들에 한해 학습에 필요한 강좌 및 물품을 아낌없이 지원합니다. 동아리방을 포함한 시설 예약, 타 학회와의 교류 등 예비 개발자로서 누릴 수 있는 최고의 환경을 누리세요.',
     gradient: 'from-white to-[#AD49E1]',
 
     icon: 'support.svg'
@@ -58,7 +58,7 @@ export default function SellingPointsSection() {
   }
 
   return (
-    <section className="relative overflow-hidden bg-black sm:px-6 lg:px-[7%] md:pb-56 pb-28">
+    <section className="relative overflow-hidden sm:px-6 lg:px-[7%] md:pb-32 pb-20">
 
       {/* 배경 그리드 패턴 */}
       <div className="absolute inset-0">
@@ -114,7 +114,7 @@ export default function SellingPointsSection() {
           </video>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:gap-6 gap-0 xl:grid-cols-3 mt-6">
+        <div className="grid grid-cols-1 md:gap-4 xl:gap-6 gap-0 xl:grid-cols-3 mt-20">
 
           {features.map((feature, index) => (
             <motion.div
@@ -130,7 +130,7 @@ export default function SellingPointsSection() {
               onMouseMove={(e) => handleMouseMove(e, index)}
               onMouseLeave={handleMouseLeave}
             >
-              <div className="relative z-10 rounded-2xl sm:border-2 border-gray-800 bg-black/50 py-3 px-5 lg:p-8 backdrop-blur-sm transition-all duration-500 group-hover:border-gray-700 group-hover:bg-black/70 group-hover:shadow-[0_0_30px_-5px] group-hover:shadow-purple-500/20 group-hover:-translate-y-2 overflow-hidden">
+              <div className="relative z-10 rounded-2xl sm:border-2 border-gray-800 bg-black/25 py-3 px-5 lg:p-8 backdrop-blur-sm transition-all duration-500 group-hover:border-gray-700 group-hover:bg-black/70 group-hover:shadow-[0_0_30px_-5px] group-hover:shadow-purple-500/20 group-hover:-translate-y-2 overflow-hidden">
 
                 {/* 빛나는 커서 효과 */}
                 <div
