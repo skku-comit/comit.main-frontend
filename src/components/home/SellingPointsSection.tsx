@@ -58,14 +58,14 @@ export default function SellingPointsSection() {
   }
 
   return (
-    <section className="relative overflow-hidden sm:px-6 lg:px-[7%] md:pb-32 pb-20">
+    <section id="selling-points" className="relative overflow-hidden sm:px-6 lg:px-[7%] md:pb-32 pb-20">
 
       {/* 배경 그리드 패턴 */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 -mt-8 bg-[linear-gradient(to_right,rgba(255,255,255,0.07)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.07)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
       </div>
 
-      <div className="relative mx-auto px-4 mt-16 md:mt-20 lg:mt-40 max-w-7xl">
+      <div className="relative mx-auto px-4 pt-16 md:pt-20 lg:pt-40 max-w-7xl">
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

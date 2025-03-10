@@ -147,7 +147,7 @@ export default function ShowoffSection() {
             className="space-y-16"
           >
             <div className="text-center lg:text-left">
-              <h2 className="text-reveal lg:text-6xl text-3xl xl:font-extrabold leading-[1.3] bg-gradient-to-r via-[#ad49e1] from-[#ad49e1] to-[#ebd3f8] bg-[200%_auto] bg-clip-text font-bold text-transparent">
+              <h2 className="text-purple-500/80 lg:text-6xl text-[32px] xl:font-extrabold leading-[1.3] font-bold">
                 코밋이 만들어온 성장
               </h2>
             </div>

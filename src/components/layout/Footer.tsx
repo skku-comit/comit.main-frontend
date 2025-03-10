@@ -5,7 +5,7 @@ import { RiKakaoTalkFill } from 'react-icons/ri'
 export default function Footer() {
   return (
     <footer className="border-t border-gray-800 bg-gray-900">
-      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 py-8 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-4">
           {/* Contact Info */}
           <div className="space-y-3">
@@ -35,10 +35,10 @@ export default function Footer() {
               <br />
               성균관대학교 자연과학캠퍼스
               <br />
-              학생회관 20x호
+              학생회관 03312
             </p>
             <a
-              href="/location"
+              href="/about"
               className="inline-flex items-center text-sm text-gray-100 transition-colors hover:text-purple-400"
             >
               <MapPinIcon className="mr-1 h-4 w-4" />
@@ -109,7 +109,7 @@ export default function Footer() {
               <FaInstagram size={20} />
             </a>
             <a
-              href="https://youtube.com/"
+              href="https://www.youtube.com/@skku_comit"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-100 transition-colors hover:text-red-500"

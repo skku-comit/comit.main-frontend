@@ -13,11 +13,11 @@ import {
   NewspaperIcon,
   EnvelopeIcon,
   ArrowTopRightOnSquareIcon,
-  ClipboardDocumentListIcon,
-  PhotoIcon,
+  // ClipboardDocumentListIcon,
+  // PhotoIcon,
   UsersIcon,
   PaintBrushIcon,
-  PencilSquareIcon
+  // PencilSquareIcon
 } from '@heroicons/react/24/outline'
 import { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -53,26 +53,26 @@ export default function Header() {
         { name: '연락처', href: '/about/contact', subheading: '문의하기', icon: EnvelopeIcon }
       ]
     },
-    {
-      name: '기록의 숲',
-      href: '/community',
-      items: [
-        { name: '블로그', href: '/community/blog', subheading: '개발, 그리고 동아리 이야기', icon: PencilSquareIcon },
-        {
-          name: '학습기록',
-          href: '/community/study',
-          subheading: '학기별 스터디/세션 기록',
-          icon: ClipboardDocumentListIcon
-        },
-        {
-          name: '미디어관',
-          href: '/community/media',
-          subheading: '코밋의 행사/이벤트',
-          icon: PhotoIcon,
-          useStroke: true
-        }
-      ]
-    },
+    // {
+    //   name: '기록의 숲',
+    //   href: '/community',
+    //   items: [
+    //     { name: '블로그', href: '/community/blog', subheading: '개발, 그리고 동아리 이야기', icon: PencilSquareIcon },
+    //     {
+    //       name: '학습기록',
+    //       href: '/community/study',
+    //       subheading: '학기별 스터디/세션 기록',
+    //       icon: ClipboardDocumentListIcon
+    //     },
+    //     {
+    //       name: '미디어관',
+    //       href: '/community/media',
+    //       subheading: '코밋의 행사/이벤트',
+    //       icon: PhotoIcon,
+    //       useStroke: true
+    //     }
+    //   ]
+    // },
     {
       name: '자료실', //임시방편
       href: '/resources',
@@ -197,7 +197,7 @@ export default function Header() {
             onMouseLeave={() => setIsDropdownOpen(false)}
           >
             <button className="p-2 text-gray-300 transition-colors hover:text-white" aria-label="프로필">
-              <UserCircleIcon className="h-8 w-8" />
+              <UserCircleIcon className="size-6 sm:size-8" />
             </button>
 
             {/* 드롭다운 메뉴 */}
@@ -217,7 +217,7 @@ export default function Header() {
                       transition={{ duration: 0.2, ease: 'easeOut' }}
                     >
                       <a
-                        href="https://comit-ams-jungjuns-projects.vercel.app/"
+                        href="https://comit-website.vercel.app/"
                         className="group block px-2.5 py-2 transition-colors"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -227,7 +227,21 @@ export default function Header() {
                             <ArrowTopRightOnSquareIcon className="h-5 w-5 stroke-2 text-gray-300 transition-colors group-hover:fill-white group-hover:stroke-black" />
                           </div>
                           <div className="text-[15px] font-normal text-gray-200 group-hover:text-white">
-                            COMS(코밋 스페이스)
+                            메인 웹사이트
+                          </div>
+                        </div>
+                      </a>                      <a
+                        href="https://cams-orpin.vercel.app/my-activities"
+                        className="group block px-2.5 py-2 transition-colors"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <div className="ml-2 flex items-center">
+                          <div className="mr-2.5 flex h-10 w-10 items-center justify-center rounded-lg bg-gray-700/50 transition-colors group-hover:bg-white">
+                            <ArrowTopRightOnSquareIcon className="h-5 w-5 stroke-2 text-gray-300 transition-colors group-hover:fill-white group-hover:stroke-black" />
+                          </div>
+                          <div className="text-[15px] font-normal text-gray-200 group-hover:text-white">
+                            CAMS(서비스 준비중)
                           </div>
                         </div>
                       </a>

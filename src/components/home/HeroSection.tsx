@@ -2,10 +2,15 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { ArrowRightIcon, SparklesIcon } from '@heroicons/react/24/outline'
+import { ArrowRightIcon, SparklesIcon, ChevronDownIcon } from '@heroicons/react/24/outline'
 import TechMarquee from '@/components/ui/TechMarquee'
 
 export default function HeroSection() {
+  const scrollToSellingPoints = () => {
+    const sellingPointsSection = document.getElementById('selling-points')
+    sellingPointsSection?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <div className="relative h-[calc(100vh-4rem)]">
 
@@ -66,7 +71,7 @@ export default function HeroSection() {
                   <div className="rounded-full bg-white/10 p-1">
                     <SparklesIcon className="h-4 w-4 text-white" />
                   </div>
-                  <span className="text-xs md:text-base font-medium tracking-tight text-gray-200 pr-2">신규 <span className='text-gray-400 font-medium inline-block -translate-y-0.5'>|</span> 2024 활동 요약 살펴보기 </span>
+                  <span className="text-xs md:text-base font-normal tracking-tight text-gray-200 pr-2">신규 <span className='text-gray-400 font-medium inline-block'>|</span> 2024 활동 요약 살펴보기 </span>
                 </Link>
               </div>
             </div>
@@ -372,8 +377,29 @@ export default function HeroSection() {
         </div>
       </section>
       <div className="absolute bottom-0 left-0 right-0 z-20">
-        <TechMarquee /> {/* Height 60px */}
+        <TechMarquee />
       </div>
+
+      {/* 스크롤 다운 버튼 */}
+      <motion.button
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        onClick={scrollToSellingPoints}
+        className="sm:hidden absolute left-0 right-0 mx-auto bottom-[8vh] w-fit"
+      >
+        <motion.div
+          initial={{ y: 0 }}
+          animate={{ y: [0, -8, 0] }}
+          transition={{
+            duration: 0.9,
+            times: [0, 0.5, 1],
+            repeat: 2,
+            ease: "easeInOut"
+          }}
+        >
+          <ChevronDownIcon className="h-8 w-8 text-white/80 hover:text-white/100 transition-colors" />
+        </motion.div>
+      </motion.button>
     </div>
   )
 }
