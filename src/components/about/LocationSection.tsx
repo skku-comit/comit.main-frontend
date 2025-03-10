@@ -45,7 +45,7 @@ export default function LocationSection() {
               </div>
             </div>
 
-            <div className="rounded-xl bg-white/5 p-6">
+            <div className="rounded-xl bg-white/15 p-6">
               <div className="flex items-start gap-4">
                 <MapPinIcon className="h-6 w-6 text-[#ad49e1] flex-shrink-0" />
                 <div>
