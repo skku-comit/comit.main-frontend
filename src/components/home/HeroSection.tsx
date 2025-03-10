@@ -385,7 +385,7 @@ export default function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         onClick={scrollToSellingPoints}
-        className="sm:hidden absolute left-0 right-0 mx-auto bottom-[8vh] w-fit"
+        className="sm:hidden absolute left-0 right-0 mx-auto bottom-[12vh] w-fit"
       >
         <motion.div
           initial={{ y: 0 }}
