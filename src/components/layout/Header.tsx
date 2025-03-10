@@ -231,7 +231,7 @@ export default function Header() {
                           </div>
                         </div>
                       </a>                      <a
-                        href="https://cams-orpin.vercel.app/my-activities"
+                        href="https://cams-orpin.vercel.app/"
                         className="group block px-2.5 py-2 transition-colors"
                         target="_blank"
                         rel="noopener noreferrer"
