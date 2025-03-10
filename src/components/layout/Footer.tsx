@@ -51,13 +51,13 @@ export default function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Links</h3>
             <ul className="space-y-2 text-sm text-gray-100">
               <li>
-                <a href="https://manage.commit-club.com" className="transition-colors hover:text-white">
-                  활동관리시스템
+                <a href="https://comit-website.vercel.app" className="transition-colors hover:text-white">
+                  메인 홈페이지
                 </a>
               </li>
               <li>
-                <a href="/about" className="transition-colors hover:text-white">
-                  About Us
+                <a href="https://cams-orpin.vercel.app/" className="transition-colors hover:text-white">
+                  활동관리 웹사이트(서비스 준비중)
                 </a>
               </li>
               <li>
