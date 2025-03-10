@@ -5,7 +5,10 @@ import Footer from '@/components/layout/Footer'
 
 export const metadata: Metadata = {
   title: 'Comit - 성균관대학교 코딩 동아리',
-  description: '성균관대학교 코딩 동아리 Comit 공식 홈페이지'
+  description: '성균관대학교 코딩 동아리 Comit 공식 홈페이지',
+  icons: {
+    icon: "/comitLogo.ico"
+  }
 }
 
 export default function RootLayout({
